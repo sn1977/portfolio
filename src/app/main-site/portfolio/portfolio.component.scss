@@ -1,0 +1,38 @@
+.headline-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    .short-blue-line {
+        width: 240px;
+        border: 2px solid #4b47ff;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+
+    h1 {
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 108px;
+    }
+
+    .long-blue-line {
+        position: absolute;
+        width: 484px;
+        right: 0;
+        border: 2px solid #4b47ff;
+    }
+}
+
+span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}

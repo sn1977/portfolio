@@ -1,0 +1,172 @@
+div {
+  background-color: #141d2f;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+div .profile-shadows {
+  position: relative;
+  width: 880px;
+  height: 1000px;
+  left: -80px;
+  top: 300px;
+}
+div img:nth-child(2) {
+  position: absolute;
+  top: 350px;
+  left: -380px;
+}
+div .vertical-letters {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 77px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  rotate: 270deg;
+  height: fit-content;
+}
+@media (max-width: 1780px) {
+  div .vertical-letters {
+    font-size: 40px;
+  }
+  div .profile-name {
+    font-size: 56px !important;
+  }
+  div .profile-profession {
+    font-size: 32px !important;
+  }
+}
+div div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 112px;
+}
+div .profile-name {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 108px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+div .profile-profession {
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 70px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4B47FF;
+  justify-content: flex-start;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 56px;
+}
+
+button {
+  width: 165px;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+  background-color: #00BEE8;
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 28px;
+  border: none;
+  font-family: Poppins, sans-serif;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top;
+  z-index: 2;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #4B47FF;
+  transform: scale(1.3);
+}
+
+.background-form {
+  position: absolute;
+  top: 600px;
+  left: -5px;
+  width: 100%;
+}
+
+.blue-contact-line {
+  width: 100px;
+  height: 0;
+  border: 4px solid #4B47FF;
+  z-index: 2;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: unset;
+}
+
+.contact-line {
+  position: relative;
+  top: 270px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 150px;
+}
+
+.contact-section {
+  width: 700px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
+.contact-section a, .contact-section span {
+  z-index: 2;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contact-section a img, .contact-section span img {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+.contact-section a img:hover, .contact-section span img:hover {
+  transform: scale(1.3);
+}
+.contact-section .icon-size {
+  width: 30px;
+  height: 30px;
+}
+
+.scroll-down-div {
+  z-index: 2;
+  transform: rotate(90deg);
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: -120px;
+  background: transparent;
+}
+.scroll-down-div .icon-arrow {
+  transform: rotate(-90deg);
+  margin-left: 6px;
+  width: 24px;
+  height: 24px;
+  position: unset;
+}
+
+@media (max-width: 1780px) {
+  .vertical-letters {
+    font-size: 0.5em;
+  }
+}
+
+/*# sourceMappingURL=introduction.component.css.map */

@@ -1,0 +1,9 @@
+<div class="portfolio-container">
+    <div class="headline-container">
+        <div class="short-blue-line"></div>
+        <h1>Portfolio</h1>
+        <div class="long-blue-line"></div>
+    </div>
+    <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+</div>
+<app-projects *ngFor="let project of projects; let i = index" [project]="project"></app-projects>

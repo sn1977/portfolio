@@ -1,0 +1,43 @@
+<header class="header">
+    <div>
+        <a href="#start">
+            <span class="logo-letters">S</span>
+            <span class="color-letter">a</span>
+            <span class="logo-letters">sch</span>
+            <span class="color-letter">a</span>
+        </a>
+    </div>
+
+    <div>
+        <a href="#about-me">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+    </div>
+
+<!--    <input (click)="showMobileMenu()" type="checkbox" id="menu_checkbox">-->
+<!--    <label class="mobile-nav-bar" for="menu_checkbox">-->
+<!--        <div [class.div1-change]="mobileMenu"></div>-->
+<!--        <div [class.div2-change]="mobileMenu"></div>-->
+<!--        <div [class.div3-change]="mobileMenu"></div>-->
+<!--    </label>-->
+
+<!--    <div *ngIf="mobileMenu" class="mobile-menu">-->
+<!--        <a href="#about-me" (click)="closeMobileMenu()"><span class="header-link-mobile">About me</span></a>-->
+<!--        <a href="#skills" (click)="closeMobileMenu()"><span class="header-link-mobile">Skills</span></a>-->
+<!--        <a href="#portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>-->
+<!--        <a href="#contact" (click)="closeMobileMenu()"><span class="header-link-mobile">Contact</span></a>-->
+<!--    </div>-->
+
+    <label class="mobile-nav-bar" (click)="showMobileMenu()">
+        <div [class.div1-change]="mobileMenu"></div>
+        <div [class.div2-change]="mobileMenu"></div>
+        <div [class.div3-change]="mobileMenu"></div>
+    </label>
+
+        <div *ngIf="mobileMenu" class="mobile-menu">
+            <a href="#about-me" (click)="closeMobileMenu()"><span class="header-link-mobile">About me</span></a>
+            <a href="#skills" (click)="closeMobileMenu()"><span class="header-link-mobile">Skills</span></a>
+            <a href="#portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>
+            <a href="#contact" (click)="closeMobileMenu()"><span class="header-link-mobile">Contact</span></a>
+        </div>
+</header>

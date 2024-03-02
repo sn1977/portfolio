@@ -1,0 +1,93 @@
+.project-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    padding-left: 100px;
+    z-index: 2;
+
+    img {
+        width: 600px;
+        margin-bottom: 30px;
+        object-fit: cover;
+    }
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    //gap: 35px;
+    //justify-content: center;
+
+    h2 {
+        padding-top: 88px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+        color: #4b47ff;
+
+         }
+}
+
+.tec {
+    font-weight: 400;
+    font-size: 23px;
+    color: #00bee8;
+    line-height: 27.6px;
+    margin-bottom: 16px;
+}
+
+.description {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 32px;
+    max-width: 600px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-live-test {
+    color: white;
+    font-weight: 400;
+    font-size: 23px;
+    background-color: #4b47ff;
+    width: 152px;
+    height: 58px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 65px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #00bee8;
+    }
+}
+
+.btn-github {
+    color: white;
+    font-weight: 400;
+    font-size: 23px;
+    background-color: unset;
+    width: 152px;
+    height: 58px;
+    border-radius: 10px;
+    border: 2px solid #00bee8;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #00bee8;
+    }
+}
+
+.change-direction {
+    flex-direction: row-reverse;
+    justify-content: start !important;
+}
+
+.change-direction-img {
+    margin-right: 0 !important;
+    margin-left: 70px;
+}

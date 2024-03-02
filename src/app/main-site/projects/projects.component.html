@@ -1,0 +1,18 @@
+<div data-aos="zoom-in" data-aos-duration="1500" [class.change-direction]="changeSequence" class="project-container">
+    <div [class.change-direction-img]="changeSequence" class="img-container">
+        <img src="assets/img/{{ project.img }}" />
+    </div>
+    <div class="project-info">
+        <h2>{{ project.name }}</h2>
+        <span class="tec">{{ project.tec }}</span>
+        <span class="description">{{ project.description }}</span>
+        <div class="btn-container">
+            <a href="{{ project.projectLink }}" target="_blank">
+                <button class="btn-live-test">Live test</button>
+            </a>
+            <a href="{{ project.githubLink }}" target="_blank">
+                <button class="btn-github">Github</button>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 100px;
+    margin-top: 120px;
+    height: 100vh;
+
+}
+.about-me-container {
+    min-height: 800px;
+
+    h1 {
+        width: 452px;
+        height: 108px;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 108px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #FFFFFF;
+    }
+
+    .about-me-text {
+        width: 471px;
+        height: 336px;
+        color: #FFFFFF;
+    }
+}
+
+.explanation-container {
+    display: flex;
+    padding: 35px 0 0 35px;
+}
+
+.bulb-icon {
+    width: 34.47px;
+    height: 50px;
+    padding-right: 35px;
+
+    &:hover {
+        transform-origin: top;
+        transform: scale(1.3);
+    }
+}
+
+.puzzle-icon {
+    width: 50px;
+    height: 50px;
+    padding-right: 19.47px;
+
+    &:hover {
+        transform-origin: top right;
+        transform: scale(1.3);
+    }
+}
+
+.round-img-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+        width: 550px;
+        height: auto;
+        object-fit: contain;
+        border: 4px solid #00BEE8;
+        border-radius: 100%;
+    }
+}
+
+.blue-line {
+    border: 2px solid #00BEE8;
+    width: 34%;
+    height: 0;
+    z-index: 2;
+}
+
+.shadow-blue {
+    position: absolute;
+    right: -380px;
+    top: 1150px;
+    z-index: 1;
+}

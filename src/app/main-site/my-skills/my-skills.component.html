@@ -1,0 +1,21 @@
+<div class="skills-container">
+    <div class="skills">
+        <div *ngFor="let skillBox of skills; let i = index" class="skill-box">
+            <img src="assets/icons/{{ skills[i].img }}"/>
+            <span>{{ skills[i].name }}</span>
+        </div>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center" class="headline">
+        <div class="headline-container">
+        <h1 class="headline-my-skills">My skills</h1>
+        </div>
+        <span class="text-skills">
+      I have grown my frontend development skills that have allowed me to
+      create different real projects.
+    </span>
+        <a class="btn-a-skills" href="#scroll-to-contact">
+            <button class="btn-get-in-touch" (click)="scrollToContact()">Get in touch</button>
+        </a>
+    <div class="blue-line"></div>
+    <img class="background-form" src="../../../assets/img/green-shadow.png">
+</div>
