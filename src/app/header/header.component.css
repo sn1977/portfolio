@@ -62,7 +62,7 @@ a .color-letter {
   backdrop-filter: blur(3px);
 }
 .mobile-menu a {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
   margin-bottom: 29px;
 }
@@ -109,9 +109,27 @@ label div {
   transform: rotate(-45deg);
 }
 
-@media (max-width: 1780px) {
+@media (max-width: 970px) {
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: calc(100% - 60px);
+  }
+  .mobile-menu {
+    margin-left: -30px;
+  }
+}
+@media (max-width: 720px) {
   .mobile-nav-bar {
     display: block;
+  }
+  .navigation-bar {
+    display: none !important;
+  }
+}
+@media (max-width: 380px) {
+  .logo {
+    display: none;
   }
 }
 

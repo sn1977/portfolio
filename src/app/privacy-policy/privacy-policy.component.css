@@ -7,4 +7,39 @@ div a {
   color: #00bee8;
 }
 
+@media (max-width: 970px) {
+  div {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 650px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 0.8em;
+  }
+  p, li {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 0.9em;
+  }
+  h2 {
+    font-size: 0.8em;
+  }
+  h3 {
+    font-size: 0.7em;
+  }
+  p, li {
+    font-size: 0.6em;
+  }
+}
+
 /*# sourceMappingURL=privacy-policy.component.css.map */

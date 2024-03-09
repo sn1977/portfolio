@@ -12,5 +12,5 @@ import {FooterComponent} from './footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'untitled';
+  title = 'Sascha Nemeth | Portfolio';
 }

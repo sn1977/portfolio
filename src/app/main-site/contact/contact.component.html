@@ -16,10 +16,10 @@
             <input type="text" formControlName="nameForm" placeholder="Your name">
             <img class="done-icon"
                  *ngIf="contactForm.get('nameForm')?.valid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
-                 ngSrc="../../../assets/icons/done-icon.png" height="26" width="25">
+                 ngSrc="/assets/icons/done-icon.png" height="26" width="25">
             <img class="error-icon"
                  *ngIf="contactForm.get('nameForm')?.invalid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
-                 ngSrc="../../../assets/icons/error-icon.png" height="26" width="26">
+                 ngSrc="/assets/icons/error-icon.png" height="26" width="26">
         </div>
         <div
             *ngIf="contactForm.get('nameForm')?.invalid && contactForm.get('nameForm')?.touched || contactForm.get('nameForm')?.dirty">
@@ -38,10 +38,10 @@
             <input type="email" formControlName="emailForm" placeholder="Your email">
             <img class="done-icon"
                  *ngIf="contactForm.get('emailForm')?.valid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
-                 ngSrc="../../../assets/icons/done-icon.png" height="26" width="25">
+                 ngSrc="/assets/icons/done-icon.png" height="26" width="25">
             <img class="error-icon"
                  *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
-                 ngSrc="../../../assets/icons/error-icon.png" height="26" width="26">
+                 ngSrc="/assets/icons/error-icon.png" height="26" width="26">
         </div>
         <div
             *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
@@ -61,10 +61,10 @@
                       [class.green-border]="contactForm.get('messageForm')?.valid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"></textarea>
             <img class="done-icon"
                  *ngIf="contactForm.get('messageForm')?.valid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
-                 ngSrc="../../../assets/icons/done-icon.png" height="26" width="25">
+                 ngSrc="/assets/icons/done-icon.png" height="26" width="25">
             <img class="error-icon"
                  *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
-                 ngSrc="../../../assets/icons/error-icon.png" height="26" width="26">
+                 ngSrc="/assets/icons/error-icon.png" height="26" width="26">
             <span class="alert-letters-textarea"
                   *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)">
                 Your message is empty or too short
@@ -99,6 +99,6 @@
 </div>
 
 <div class="scroll-up" (click)="scrollToContact()">
-    <img src="../../../assets/icons/arrow-up-circle.png">
+    <img src="/assets/icons/arrow-up-circle.png">
 </div>
-<img class="background-end-form" src="../../../assets/img/end-shadow.png">
+<img class="background-end-form" src="/assets/img/end-shadow.png">

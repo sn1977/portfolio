@@ -14,11 +14,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
             //parse the Payload from text format to Object
             $params = json_decode($json);
 
-            $email = $params->email;
-            $name = $params->name;
-            $message = $params->message;
+            $email = $params->emailForm; // Changed from email to emailForm
+            $name = $params->nameForm; // Changed from name to nameForm
+            $message = $params->messageForm; // Changed from message to messageForm
 
-            $recipient = 'sascha.nemeth@me.com';
+            $recipient = 'contact@sascha-nemeth.com';
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
 
@@ -27,7 +27,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: noreply@sascha-nemeth.com";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;

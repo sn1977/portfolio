@@ -8,3 +8,20 @@
         color: #00bee8;
     }
 }
+
+@media (max-width: 970px) {
+    .imprint-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+}

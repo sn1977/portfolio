@@ -54,10 +54,8 @@ a {
 
 .mobile-menu {
     position: absolute;
-    //background-color: #414856;
     height: calc(100vh - 110px);
     width: 100%;
-    //z-index: 10;
     top: 110px;
     margin-left: -100px;
     display: flex;
@@ -68,7 +66,7 @@ a {
     backdrop-filter: blur(3px);
 
     a {
-        color: white;
+        color: #FFFFFF;
         text-decoration: none;
         margin-bottom: 29px;
 
@@ -79,34 +77,18 @@ a {
     }
 }
 
-
-//#menu_checkbox {
-//    display: none;
-//}
-
 label {
     position: absolute;
     top: 65px;
     right: 30px;
     display: block;
     width: 40px;
-    //height: 34px;
     margin: -30px auto 0 auto;
 
     &:hover {
         cursor: pointer;
     }
 }
-
-//label:before {
-//    content: "";
-//    position: fixed;
-//    top: 69px;
-//    right: 30px;
-//    width: 40px;
-//    height: 34px;
-//    transition: 1.2s cubic-bezier(0, 0.96, 1, 0.02) background-color;
-//}
 
 label div {
     position: relative;
@@ -118,20 +100,6 @@ label div {
     0.2s ease-in-out right;
     border-radius: 2px;
 }
-
-//label div:first-child {
-//    transform-origin: 0;
-//}
-//
-//label div:last-child {
-//    margin-bottom: 0;
-//    transform-origin: 60px;
-//}
-//
-//label div:nth-child(2) {
-//    right: 0;
-//    width: 40px;
-//}
 
 .div1-change {
     top: 10px !important;
@@ -150,8 +118,30 @@ label div {
     transform: rotate(-45deg);
 }
 
-@media (max-width: 1780px) {
+@media (max-width: 970px) {
+    header {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: calc(100% - 60px);
+    }
+
+    .mobile-menu {
+        margin-left: -30px;
+    }
+}
+
+@media (max-width: 720px) {
     .mobile-nav-bar {
         display: block;
+    }
+
+    .navigation-bar {
+        display: none !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo {
+        display: none;
     }
 }

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["privacy-policy.component.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;AAEA;EACI;EACA","file":"privacy-policy.component.css"}
+{"version":3,"sourceRoot":"","sources":["privacy-policy.component.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;AAEA;EACI;EACA;;;AAIR;EACI;IACI;IACA;;;AAIR;EACI;IACI;;EAGJ;IACI;;EAGJ;IACI;;EAGJ;IACI;;;AAIR;EACI;IACI;;EAGJ;IACI;;EAGJ;IACI;;EAGJ;IACI","file":"privacy-policy.component.css"}

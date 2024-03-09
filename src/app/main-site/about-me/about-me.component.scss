@@ -7,6 +7,7 @@ section {
     height: 100vh;
 
 }
+
 .about-me-container {
     min-height: 800px;
 
@@ -82,4 +83,51 @@ section {
     right: -380px;
     top: 1150px;
     z-index: 1;
+}
+
+@media (max-width: 1120px) {
+
+    .round-img-container img {
+        width: 300px;
+    }
+
+    .blue-line {
+        width: 20%;
+    }
+}
+
+@media (max-width: 970px) {
+    section {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 880px) {
+    .round-img-container {
+        display: none;
+    }
+
+    .shadow-blue {
+        z-index: -1;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 56px !important;
+    }
+
+    .about-me-text {
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 470px) {
+    h1 {
+        font-size: 40px !important;
+    }
+
+    .about-me-text {
+        width: 300px !important;
+    }
 }

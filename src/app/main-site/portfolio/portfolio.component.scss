@@ -5,6 +5,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
+    padding-top: 100px;
 
     .short-blue-line {
         width: 240px;
@@ -35,4 +36,99 @@ span {
     text-align: center;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 1665px) {
+    .long-blue-line {
+        width: 350px !important;
+    }
+}
+
+@media (max-width: 1410px) {
+    .long-blue-line {
+        width: 300px !important;
+    }
+}
+
+@media (max-width: 1310px) {
+    .long-blue-line {
+        width: 200px !important;
+    }
+
+    .short-blue-line {
+        width: 160px !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .long-blue-line {
+        width: 200px !important;
+    }
+
+    h1 {
+        font-size: 64px !important;
+    }
+
+    .short-blue-line {
+        width: 120px !important;
+    }
+}
+
+@media (max-width: 880px) {
+    .long-blue-line {
+        width: 150px !important;
+    }
+
+    h1 {
+        font-size: 56px !important;
+    }
+
+    .short-blue-line {
+        width: 100px !important;
+    }
+}
+
+@media (max-width: 770px) {
+    .long-blue-line {
+        width: 120px !important;
+    }
+
+    .short-blue-line {
+        width: 70px !important;
+    }
+
+    span {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 665px) {
+    h1 {
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 565px) {
+    .long-blue-line {
+        width: 80px !important;
+    }
+
+    .short-blue-line {
+        width: 50px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .long-blue-line {
+        width: 45px !important;
+    }
+
+    .short-blue-line {
+        width: 30px !important;
+    }
+
+    h1 {
+        font-size: 32px !important
+    }
 }
