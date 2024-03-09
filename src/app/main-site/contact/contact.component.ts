@@ -82,6 +82,7 @@ export class ContactComponent implements OnInit {
                 .subscribe({
                     next: (response) => {
                         this.contactForm.reset(); // Resets form upon successful submission.
+                        this.submitAttempted = false; // Resets submitAttempted to hide the privacy alert.
                     },
                     error: (error) => {
                         console.error('There was an issue sending the email', error);
@@ -91,50 +92,3 @@ export class ContactComponent implements OnInit {
         }
     }
 }
-
-// // Other imports remain unchanged
-// import { Component, OnInit } from '@angular/core';
-// import { FormControl, FormGroup, Validators } from '@angular/forms';
-// import { HttpClient } from '@angular/common/http';
-//
-// @Component({
-//     // Component metadata remains unchanged
-// })
-// export class ContactComponent implements OnInit {
-//     // Property definitions remain unchanged
-//
-//     constructor(private http: HttpClient) { } // Inject HttpClient service
-//
-//     ngOnInit() {
-//         // Your ngOnInit logic remains unchanged
-//     }
-//
-//     // Method definitions remain unchanged
-//     scrollToContact(): void {
-//         // Your scrollToContact logic remains unchanged
-//     }
-//
-//     showPrivacyAlert(): void {
-//         // Your showPrivacyAlert logic remains unchanged
-//     }
-//
-//     onSubmit(): void {
-//         this.submitAttempted = true; // Indicate that a submit attempt has been made
-//         if (this.contactForm.valid) {
-//             this.sendFormData(this.contactForm.value); // Call a separate method to handle the HTTP request
-//         }
-//     }
-//
-//     private sendFormData(formData: any): void {
-//         // Move your HTTP POST logic here
-//         this.http.post('https://sascha-nemeth.developerakademie.net/sendMail.php', formData).subscribe({
-//             next: (response) => {
-//                 this.contactForm.reset(); // Resets the form upon successful submission
-//             },
-//             error: (error) => {
-//                 console.error('There was an issue sending the email', error);
-//             },
-//             complete: () => console.info('Email send process complete')
-//         });
-//     }
-// }

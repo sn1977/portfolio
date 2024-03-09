@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* fonts */
 /* poppins-100 - latin */
 @import 'aos/dist/aos.css';
@@ -154,6 +155,25 @@ body {
   background-color: #141d2f;
   color: #FFFFFF;
   overflow-x: hidden;
+}
+
+/* Das ist für Webkit-Browser wie Chrome, Safari und neueste Edge-Versionen */
+::-webkit-scrollbar {
+  width: 4px; /* Breite des Scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #4b47ff; /* Farbe des Hintergrunds des Scrollbars */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00bee8; /* Farbe des Scrollbars selbst */
+  border-radius: 16px;
+}
+
+/* Ändern der Farbe beim Überfahren des Scrollbars mit der Maus */
+::-webkit-scrollbar-thumb:hover {
+  background: #00bee8;
 }
 
 /*# sourceMappingURL=styles.css.map */

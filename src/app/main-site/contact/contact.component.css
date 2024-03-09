@@ -296,5 +296,21 @@ form input::placeholder, form textarea::placeholder {
     font-size: 40px !important;
   }
 }
+.input-div input {
+  background-color: #141d2f;
+  color: #FFFFFF;
+}
+.input-div input:focus {
+  background-color: #141d2f;
+  color: #FFFFFF;
+}
+.input-div input:invalid {
+  background-color: #141d2f;
+  color: #FFFFFF;
+}
+.input-div input:valid {
+  background-color: #141d2f;
+  color: #FFFFFF;
+}
 
 /*# sourceMappingURL=contact.component.css.map */

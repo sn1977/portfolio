@@ -324,3 +324,20 @@ form {
         font-size: 40px !important;
     }
 }
+
+.input-div input {
+    background-color: #141d2f; // Dunkler Hintergrund
+    color: #FFFFFF; // Weiße Schrift
+    &:focus {
+        background-color: #141d2f; // Sorgt dafür, dass der Hintergrund auch beim Fokussieren nicht wechselt.
+        color: #FFFFFF; // Sorgt dafür, dass die Schriftfarbe beim Fokussieren nicht wechselt.
+    }
+    &:invalid {
+        background-color: #141d2f; // Sorgt dafür, dass der Hintergrund nicht wechselt, wenn die Eingabe ungültig ist.
+        color: #FFFFFF; // Sorgt dafür, dass die Schriftfarbe nicht wechselt, wenn die Eingabe ungültig ist.
+    }
+    &:valid {
+        background-color: #141d2f; // Sorgt dafür, dass der Hintergrund nicht wechselt, wenn die Eingabe gültig ist.
+        color: #FFFFFF; // Sorgt dafür, dass die Schriftfarbe nicht wechselt, wenn die Eingabe gültig ist.
+    }
+}

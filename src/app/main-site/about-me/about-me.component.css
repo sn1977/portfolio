@@ -4,11 +4,14 @@ section {
   position: relative;
   padding-left: 100px;
   margin-top: 120px;
-  height: 100vh;
+  max-height: 2220px;
 }
 
 .about-me-container {
-  min-height: 800px;
+  min-height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding-right: 32px;
 }
 .about-me-container h1 {
   width: 452px;
@@ -18,16 +21,11 @@ section {
   line-height: 108px;
   letter-spacing: 0em;
   text-align: left;
-  color: #FFFFFF;
-}
-.about-me-container .about-me-text {
-  width: 471px;
-  height: 336px;
-  color: #FFFFFF;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .explanation-container {
-  display: flex;
   padding: 35px 0 0 35px;
 }
 
@@ -90,6 +88,7 @@ section {
 @media (max-width: 970px) {
   section {
     padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media (max-width: 880px) {
@@ -99,21 +98,18 @@ section {
   .shadow-blue {
     z-index: -1;
   }
+  .about-me-container {
+    padding-right: 0;
+  }
 }
 @media (max-width: 550px) {
   h1 {
     font-size: 56px !important;
   }
-  .about-me-text {
-    width: 400px !important;
-  }
 }
 @media (max-width: 470px) {
   h1 {
     font-size: 40px !important;
-  }
-  .about-me-text {
-    width: 300px !important;
   }
 }
 

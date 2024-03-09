@@ -169,6 +169,7 @@ a {
     .btn-skills {
         position: relative;
         bottom: -580px;
+        z-index: 2;
     }
 }
 
@@ -176,6 +177,7 @@ a {
     h1 {
         font-size: 56px !important;
     }
+
     .btn-skills {
         bottom: -750px;
     }
@@ -193,10 +195,6 @@ a {
 }
 
 @media (max-width: 475px) {
-    .skills-container {
-        padding-top: 750px !important;
-    }
-
     .blue-line {
         top: 835px;
         width: 15%;
