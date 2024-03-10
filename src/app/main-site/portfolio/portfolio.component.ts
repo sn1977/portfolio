@@ -30,7 +30,7 @@ export class PortfolioComponent {
             tec: 'JavaScript | HTML | CSS',
             description: 'Task manager inspired by the kanban system. Create and organize tasks using drag and drop functions, assign users and categories.',
             githubLink: 'https://github.com/sn1977/join',
-            projectLink: 'https://sascha-nemeth.developerakademie.net/join/html/logIn.html'
+            projectLink: 'https://join.sascha-nemeth.com'
         },
         {
             name: 'El Pollo Loco',
@@ -38,7 +38,7 @@ export class PortfolioComponent {
             tec: 'JavaScript | HTML | CSS',
             description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the crazy hen.',
             githubLink: 'https://github.com/sn1977/el_pollo_loco2',
-            projectLink: 'https://sascha-nemeth.developerakademie.net/el_pollo_loco2/index.html'
+            projectLink: 'https://el-pollo-loco.sascha-nemeth.com/'
         }
     ];
 }
