@@ -1,60 +1,75 @@
-div {
+@charset "UTF-8";
+.main-container {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: 100%; /* Die gewünschte Breite oder ein fester Wert */
+  height: 900px; /* Oder eine feste Höhe nach Ihrer Wahl */
+  overflow: hidden; /* Stellt sicher, dass der Inhalt im Container bleibt */
+  top: 110px;
+}
+
+.container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Bedeckt den Bereich des Containers, ohne das Seitenverhältnis zu verlieren */
+  top: 0;
+  left: -400px;
+}
+
+.profile-img {
+  z-index: 1; /* Stellt sicher, dass das Profilbild über dem Schatten liegt */
+}
+
+.profile-shadows {
+  z-index: 0;
+  object-fit: contain !important;
+}
+
+.intro-box {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding-right: 100px;
-}
-div .profile-shadows {
-  position: relative;
-  width: 880px;
-  height: 1000px;
-  left: -80px;
-  top: 300px;
-}
-div img:nth-child(2) {
   position: absolute;
-  top: 350px;
-  left: -380px;
-}
-div .vertical-letters {
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 77px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #ffffff;
-  rotate: 270deg;
-  height: fit-content;
-  position: relative;
-}
-div .intro-box {
-  position: absolute;
+  max-width: 718px;
+  height: 172px;
+  top: 297px;
   right: 100px;
-  padding: 0;
 }
-div div:nth-child(2) {
+
+.vertical-letters {
+  width: 152px;
+  height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 120%;
+  transform: rotate(-90deg);
+  flex: none;
+}
+
+.profile-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-top: 112px;
-  padding-right: 0;
+  height: 172px;
 }
-div .profile-name {
-  font-size: 90px;
+
+.profile-name {
+  height: 108px;
   font-weight: 700;
-  line-height: 108px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #ffffff;
+  font-size: 67px;
+  line-height: 120%;
+  flex: none;
+  margin: 6px 0;
 }
-div .profile-profession {
-  font-size: 58px;
-  font-weight: 400;
-  line-height: 70px;
-  letter-spacing: 0em;
-  text-align: left;
+
+.profile-profession {
+  font-size: 46px;
+  line-height: 94%;
   color: #4B47FF;
-  justify-content: flex-start;
 }
 
 .btn {
@@ -65,10 +80,20 @@ div .profile-profession {
 }
 
 button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 10px;
+  z-index: 5;
+  position: absolute;
   width: 165px;
-  padding: 15px 30px 15px 30px;
+  height: 58px;
+  left: calc(50% - 82.5px);
+  background: #00BEE8;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  background-color: #00BEE8;
   color: #FFFFFF;
   font-size: 23px;
   font-weight: 400;
@@ -77,7 +102,6 @@ button {
   font-family: Poppins, sans-serif;
   transition: transform 0.3s ease-in-out;
   transform-origin: top;
-  z-index: 2;
 }
 button:hover {
   cursor: pointer;
@@ -87,15 +111,16 @@ button:hover {
 
 .background-form {
   position: absolute;
-  top: 600px;
-  width: 120vw;
+  top: 440px;
+  width: 100%;
+  z-index: 3;
 }
 
 .blue-contact-line {
   width: 100px;
   height: 0;
   border: 4px solid #4B47FF;
-  z-index: 2;
+  z-index: 4;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
   padding: unset;
@@ -103,20 +128,21 @@ button:hover {
 
 .contact-line {
   position: relative;
-  top: 270px;
+  top: 100px;
   display: flex;
   align-items: center;
-  padding-bottom: 150px;
 }
 
 .contact-section {
   width: 700px;
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   background-color: transparent;
+  z-index: 4;
 }
 .contact-section a, .contact-section span {
-  z-index: 2;
+  z-index: 6;
   text-decoration: none;
   color: #FFFFFF;
   font-size: 23px;
@@ -147,7 +173,7 @@ button:hover {
   align-items: center;
   position: absolute;
   right: 0;
-  top: -120px;
+  top: -73px;
   background: transparent;
 }
 .scroll-down-div .icon-arrow {
@@ -158,258 +184,228 @@ button:hover {
   position: unset;
 }
 
-@media (max-width: 1875px) {
-  .profile-name {
-    font-size: 78px !important;
+@media (max-width: 1350px) {
+  .container {
+    top: 85px;
   }
-  section {
-    top: 250px !important;
-  }
-}
-@media (max-width: 1780px) {
-  .vertical-letters {
-    font-size: 54px !important;
-  }
-  .profile-name {
-    font-size: 56px !important;
-  }
-  .profile-profession {
-    font-size: 44px !important;
-  }
-  .profile-shadows {
-    top: 250px !important;
-  }
-  .profile-img {
-    top: 300px !important;
-  }
-  section {
-    top: 220px !important;
+  .container img {
+    left: -350px;
   }
 }
-@media (max-width: 1680px) {
-  .profile-shadows {
-    top: 220px !important;
+@media (max-width: 1150px) {
+  .intro-box {
+    height: 70px;
   }
-  .profile-img {
-    top: 270px !important;
+  .intro-box .vertical-letters {
+    height: 0;
+    font-size: 45px;
+    line-height: unset;
   }
-  section {
-    top: 190px !important;
+  .intro-box .profile-text {
+    height: 100px;
   }
-}
-@media (max-width: 1571px) {
-  .vertical-letters {
-    font-size: 54px !important;
+  .intro-box .profile-name {
+    font-size: 56px;
+    line-height: unset;
+    height: 70px;
   }
-  .profile-name {
-    font-size: 48px !important;
+  .intro-box .profile-profession {
+    font-size: 36px;
+    line-height: unset;
   }
-  .profile-profession {
-    font-size: 44px !important;
+  .container {
+    top: 105px;
   }
-  section {
-    top: 160px !important;
+  .container img {
+    width: 90%;
+    height: 90%;
+    left: -275px;
   }
-}
-@media (max-width: 1500px) {
-  .profile-shadows {
-    top: 180px !important;
-  }
-  .profile-img {
-    top: 230px !important;
-  }
-  section {
-    top: 120px !important;
+  .contact-line {
+    top: 0;
   }
 }
-@media (max-width: 1400px) {
-  .profile-shadows {
-    top: 220px !important;
-  }
-  .profile-img {
-    top: 300px !important;
-    width: 95%;
-    left: -250px !important;
-  }
-  section {
-    top: 90px !important;
-  }
-}
-@media (max-width: 1280px) {
-  .profile-shadows {
-    width: 660px !important;
-  }
-  .profile-img {
-    top: 350px !important;
-  }
-  section {
-    top: 60px !important;
-  }
-}
-@media (max-width: 1075px) {
-  .profile-img {
-    top: 400px !important;
-  }
-  section {
-    top: 30px !important;
+@media (max-width: 1000px) {
+  .container img {
+    width: 80%;
+    height: 80%;
+    left: -220px;
+    top: 23px;
   }
 }
 @media (max-width: 970px) {
   .intro-box {
-    left: 100px;
-    right: 0;
-    top: 800px;
-    z-index: 4;
-    width: 100vw;
-    justify-content: unset;
+    height: 32px;
+    right: 30px;
   }
-  section {
-    top: 300px !important;
+  .intro-box .vertical-letters {
+    font-size: 32px;
+    width: 100px;
   }
-  .profile-shadows {
-    width: 660px !important;
-    left: 96px !important;
-    position: unset;
+  .intro-box .profile-text {
+    height: 82px;
   }
-  .profile-img {
-    top: 210px !important;
-    left: -222 !important;
-    height: 800px !important;
-    width: fit-content !important;
+  .intro-box .profile-name {
+    font-size: 42px;
+    line-height: unset;
+    height: 44px;
   }
+  .intro-box .profile-profession {
+    font-size: 32px;
+  }
+  .intro-box .btn {
+    padding-top: 24px;
+  }
+  .intro-box button {
+    padding: 15px;
+    font-size: 16px;
+    height: 42px;
+    width: 110px;
+    left: calc(50% - 52.5px);
+  }
+  .container img {
+    left: -140px;
+    top: 15px;
+  }
+}
+@media (max-width: 870px) {
   .scroll-down-div {
     display: none;
   }
-}
-@media (max-width: 890px) {
-  .profile-img {
-    top: 170px !important;
-    height: 800px !important;
-    width: fit-content !important;
-  }
-  .profile-shadows {
-    top: 100px !important;
-  }
-}
-@media (max-width: 710px) {
-  .background-form {
-    top: 650px !important;
-  }
   .intro-box {
-    left: 30px;
+    position: relative;
+    height: 100px;
+    justify-content: center;
+    top: -100px;
+    right: 24px;
+    max-width: unset;
+  }
+  .vertical-letters, .profile-profession, .profile-name, .profile-text {
+    z-index: 4;
+  }
+  .vertical-letters {
+    width: 152px !important;
+    height: 30px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 64px !important;
+    line-height: 120% !important;
+    transform: rotate(-90deg) !important;
+    flex: none !important;
+  }
+  .profile-text {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 172px !important;
+  }
+  .profile-name {
+    height: 108px !important;
+    font-weight: 700 !important;
+    font-size: 67px !important;
+    line-height: 120% !important;
+    flex: none !important;
+    margin: 6px 0 !important;
+  }
+  .profile-profession {
+    font-size: 46px !important;
+    line-height: 94% !important;
+    color: #4B47FF !important;
+  }
+  .btn {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding-top: 56px !important;
+  }
+  button {
+    width: 165px !important;
+    height: 58px !important;
+    left: calc(50% - 82.5px) !important;
+    font-size: 23px !important;
+  }
+  .contact-line {
+    top: 85px;
+  }
+  .container img {
+    left: 60px;
+    top: -40px;
   }
 }
-@media (max-width: 630px) {
-  .profile-img {
-    top: 200px !important;
-    left: -300px !important;
+@media (max-width: 720px) {
+  .intro-box {
+    height: 32px !important;
   }
-  .background-form {
-    top: 700px !important;
+  .intro-box .vertical-letters {
+    font-size: 32px !important;
+    width: 100px !important;
+    height: 0 !important;
   }
-  #email {
+  .intro-box .profile-text {
+    height: 90px !important;
+  }
+  .intro-box .profile-name {
+    font-size: 42px !important;
+    line-height: unset !important;
+    height: 56px !important;
+  }
+  .intro-box .profile-profession {
+    font-size: 32px !important;
+  }
+  .intro-box .btn {
+    padding-top: 24px !important;
+  }
+  .intro-box button {
+    padding: 15px !important;
+    font-size: 16px !important;
+    height: 42px !important;
+    width: 110px !important;
+    left: calc(50% - 52.5px) !important;
+  }
+}
+@media (max-width: 650px) {
+  .container img {
+    left: -30px;
+    top: -90px;
+    width: 100%;
+  }
+  .contact-section a {
+    font-size: 18px;
+  }
+  .icon-size {
+    width: 24px !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 520px) {
+  .container img {
+    height: 65%;
+    top: -12px;
+  }
+  .contact-line {
     display: none;
   }
-  .vertical-letters {
+}
+@media (max-width: 450px) {
+  .container img {
+    height: 45%;
+    top: 128px;
+  }
+  .intro-box {
+    top: -250px;
+  }
+  .intro-box .vertical-letters {
+    font-size: 26px !important;
+    width: 70px !important;
+  }
+  .intro-box .profile-text {
+    height: 80px !important;
+  }
+  .intro-box .profile-name {
     font-size: 30px !important;
-    line-height: 0 !important;
-    padding-right: 88px;
-    padding-top: 104px;
+    height: 43px !important;
   }
-  .profile-name {
-    font-size: 40px !important;
-    line-height: 2px !important;
-    padding-top: 72px;
-  }
-  .profile-profession {
-    font-size: 32px !important;
-  }
-  .btn {
-    padding-top: 5px;
-  }
-  .contact-line {
-    top: 200px !important;
-  }
-}
-@media (max-width: 560px) {
-  .profile-img {
-    left: -380px !important;
-  }
-  .profile-shadows {
-    left: -40px !important;
-  }
-  .intro-box {
-    left: 0px;
-  }
-}
-@media (max-width: 500px) {
-  .intro-box {
-    left: -72px;
-  }
-  .vertical-letters {
+  .intro-box .profile-profession {
     font-size: 24px !important;
-    line-height: 0 !important;
-    padding-right: 100px;
-    padding-top: 104px;
-  }
-  .profile-name {
-    font-size: 32px !important;
-    line-height: 2px !important;
-    padding-top: 80px;
-    font-weight: 600;
-  }
-  .profile-profession {
-    font-size: 24px !important;
-  }
-  button {
-    width: 120px;
-    padding: 15px;
-    font-size: 16px !important;
-    line-height: 16px;
-  }
-}
-@media (max-width: 420px) {
-  .profile-img {
-    left: -250px !important;
-    height: 547px !important;
-    top: 430px !important;
-  }
-  .profile-shadows {
-    left: -40px !important;
-  }
-  .background-form {
-    top: 770px !important;
-  }
-  .intro-box {
-    right: 0 !important;
-  }
-  .vertical-letters {
-    font-size: 18px !important;
-    line-height: 0 !important;
-    padding-right: 118px;
-    padding-top: 132px;
-  }
-  .profile-name {
-    font-size: 24px !important;
-    line-height: 2px !important;
-    padding-top: 80px;
-    font-weight: 600 !important;
-  }
-  .profile-profession {
-    font-size: 18px !important;
-    line-height: 40px !important;
-  }
-  button {
-    width: 102px;
-    padding: 15px;
-    font-size: 16px !important;
-    line-height: 14px;
-  }
-  .btn {
-    right: 50px !important;
-  }
-  .contact-line {
-    top: 150px !important;
   }
 }
 

@@ -46,7 +46,7 @@
         <div
             *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
             <span class="alert-letters"
-                  *ngIf="contactForm.get('emailForm')?.errors?.['required']">
+                  *ngIf="contactForm.get('emailForm')?.errors?.['pattern']">
                 Valid email is required
             </span>
             <span class="alert-letters"
@@ -67,7 +67,7 @@
                  ngSrc="/assets/icons/error-icon.png" height="26" width="26">
             <span class="alert-letters-textarea"
                   *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)">
-                Your message is empty or too short
+                Your message is empty or too short, please write at least 7 letters
             </span>
 
             <div class="privacy-submit-container">

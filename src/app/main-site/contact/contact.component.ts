@@ -4,6 +4,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { HttpClient } from '@angular/common/http';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import {MatDialog} from '@angular/material/dialog';
+import {EmailSuccessDialogComponent} from '../../email-success-dialog/email-success-dialog.component';
 
 /**
  * Defines ContactComponent as an Angular component.
@@ -15,7 +17,8 @@ import { RouterLink } from '@angular/router';
         ReactiveFormsModule, // Imports ReactiveFormsModule for form functionalities
         CommonModule, // Imports CommonModule for common Angular directives
         NgOptimizedImage, // Imports NgOptimizedImage for optimized image handling
-        RouterLink // Imports RouterLink for link navigation
+        RouterLink, // Imports RouterLink for link navigation
+        EmailSuccessDialogComponent
     ],
     templateUrl: './contact.component.html', // Links to the HTML template file
     styleUrls: ['./contact.component.scss'] // Links to the SCSS stylesheet file
@@ -27,12 +30,18 @@ export class ContactComponent implements OnInit {
     submitAttempted = false;
 
     /**
+     * Email pattern definition
+     */
+    emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+
+
+    /**
      * Defines the form group for the contact form with validations.
      */
     contactForm = new FormGroup({
         nameForm: new FormControl('', [Validators.required, Validators.minLength(3)]),
-        emailForm: new FormControl('', [Validators.required, Validators.email]),
-        messageForm: new FormControl('', [Validators.required, Validators.minLength(5)]),
+        emailForm: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
+        messageForm: new FormControl('', [Validators.required, Validators.minLength(7)]),
         agreeToTerms: new FormControl(false, [Validators.requiredTrue])
     });
 
@@ -69,6 +78,8 @@ export class ContactComponent implements OnInit {
     // Injection of the HttpClient service for making HTTP requests
     http = inject(HttpClient);
 
+    constructor(private dialog: MatDialog) {}
+
     /**
      * Handles form submission, sending form data if valid, and logging response.
      */
@@ -83,6 +94,7 @@ export class ContactComponent implements OnInit {
                     next: (response) => {
                         this.contactForm.reset(); // Resets form upon successful submission.
                         this.submitAttempted = false; // Resets submitAttempted to hide the privacy alert.
+                        this.dialog.open(EmailSuccessDialogComponent); // Dialog öffnen
                     },
                     error: (error) => {
                         console.error('There was an issue sending the email', error);

@@ -1,7 +1,7 @@
 footer {
   background-color: #141d2f;
   height: 291px;
-  width: 120vw;
+  width: calc(100% - 200px);
   border-top: solid 4px #00BEE8;
   display: flex;
   justify-content: space-between;
@@ -66,6 +66,8 @@ a span {
   footer {
     padding-left: 30px;
     padding-right: 30px;
+    margin: 0;
+    width: calc(100% - 60px);
   }
 }
 @media (max-width: 800px) {

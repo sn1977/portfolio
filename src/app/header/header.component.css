@@ -1,7 +1,6 @@
 header {
   height: 110px;
   background-color: #141d2f;
-  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,6 +100,7 @@ label div {
 
 .div2-change {
   display: none !important;
+  padding-right: 0 !important;
 }
 
 .div3-change {
@@ -114,6 +114,9 @@ label div {
     padding-left: 30px;
     padding-right: 30px;
     width: calc(100% - 60px);
+  }
+  .navigation-bar {
+    padding-right: 0 !important;
   }
   .mobile-menu {
     margin-left: -30px;

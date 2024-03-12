@@ -157,6 +157,12 @@ body {
   overflow-x: hidden;
 }
 
+.content-container {
+  margin: 0 auto; /* Zentriert den Container horizontal */
+  width: 100%; /* Stellt sicher, dass der Container sich auf kleinere Bildschirme ausdehnt */
+  overflow: hidden;
+}
+
 /* Das ist für Webkit-Browser wie Chrome, Safari und neueste Edge-Versionen */
 ::-webkit-scrollbar {
   width: 4px; /* Breite des Scrollbars */
@@ -174,6 +180,15 @@ body {
 /* Ändern der Farbe beim Überfahren des Scrollbars mit der Maus */
 ::-webkit-scrollbar-thumb:hover {
   background: #00bee8;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
