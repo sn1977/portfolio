@@ -158,7 +158,6 @@ body {
 }
 
 .content-container {
-    //max-width: 1440px; /* Setzt die maximale Breite */
     margin: 0 auto; /* Zentriert den Container horizontal */
     width: 100%; /* Stellt sicher, dass der Container sich auf kleinere Bildschirme ausdehnt */
     overflow: hidden;
@@ -187,5 +186,38 @@ body {
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//html, body { height: 100%; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-dialog-container {
+    font-family: Poppins, sans-serif;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed !important;
+    width: 650px;
+    height: 500px;
+    border: 3px solid #4b47ff !important;
+
+    &:hover {
+        border: 3px solid #00bee8 !important;
+    }
+    border-radius: 10px;
+    text-align: center;
+    color: red;
+    font-size: 32px;
+}
+
+.mat-mdc-dialog-surface, mdc-dialog__surface {
+    font-family: Poppins, sans-serif;
+    background-color: #141d2f !important;
+    z-index: 50 !important;
+    color: #4b47ff;
+    &:hover {
+        color: #00bee8;
+    }
+}
+
+.cdk-overlay-pane {
+    z-index: 50;
+}

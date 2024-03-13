@@ -1,3 +1,26 @@
+.bg-color {
+  background-color: #141d2f !important;
+  color: #4b47ff;
+  justify-content: center;
+}
+.bg-color:hover {
+  color: #00bee8;
+}
 
+.btn-design {
+  color: #FFFFFF;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  background-color: #4b47ff;
+  width: 152px;
+  height: 58px;
+  border-radius: 10px;
+  border: none;
+}
+.btn-design:hover {
+  cursor: pointer;
+  background-color: #00bee8;
+}
 
 /*# sourceMappingURL=email-success-dialog.component.css.map */

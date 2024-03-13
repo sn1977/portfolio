@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"email-success-dialog.component.css"}
+{"version":3,"sourceRoot":"","sources":["email-success-dialog.component.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EAKA;;AAHA;EACI;;;AAKR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA","file":"email-success-dialog.component.css"}

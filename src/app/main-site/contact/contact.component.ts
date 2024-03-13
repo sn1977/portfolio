@@ -94,7 +94,10 @@ export class ContactComponent implements OnInit {
                     next: (response) => {
                         this.contactForm.reset(); // Resets form upon successful submission.
                         this.submitAttempted = false; // Resets submitAttempted to hide the privacy alert.
-                        this.dialog.open(EmailSuccessDialogComponent); // Dialog öffnen
+                        this.dialog.open(EmailSuccessDialogComponent, {
+                            // width: '300px', // Oder jede andere Breite
+                            panelClass: 'custom-dialog-container'
+                        });
                     },
                     error: (error) => {
                         console.error('There was an issue sending the email', error);

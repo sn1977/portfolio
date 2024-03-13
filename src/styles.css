@@ -182,13 +182,36 @@ body {
   background: #00bee8;
 }
 
-html, body {
-  height: 100%;
+.custom-dialog-container {
+  font-family: Poppins, sans-serif;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: fixed !important;
+  width: 650px;
+  height: 500px;
+  border: 3px solid #4b47ff !important;
+  border-radius: 10px;
+  text-align: center;
+  color: red;
+  font-size: 32px;
+}
+.custom-dialog-container:hover {
+  border: 3px solid #00bee8 !important;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+.mat-mdc-dialog-surface, mdc-dialog__surface {
+  font-family: Poppins, sans-serif;
+  background-color: #141d2f !important;
+  z-index: 50 !important;
+  color: #4b47ff;
+}
+.mat-mdc-dialog-surface:hover, mdc-dialog__surface:hover {
+  color: #00bee8;
+}
+
+.cdk-overlay-pane {
+  z-index: 50;
 }
 
 /*# sourceMappingURL=styles.css.map */

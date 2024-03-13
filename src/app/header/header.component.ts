@@ -9,7 +9,7 @@ import { NgIf } from '@angular/common';
     selector: 'app-header', // Defines the custom tag for this component
     standalone: true, // Marks this component as standalone for encapsulation
     imports: [
-        NgIf // Imports NgIf directive for conditional rendering in the template
+        NgIf, // Imports NgIf directive for conditional rendering in the template
     ],
     templateUrl: './header.component.html', // Links to the HTML template file
     styleUrl: './header.component.scss' // Links to the SCSS stylesheet file

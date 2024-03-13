@@ -1,343 +1,3 @@
-//
-//@media (max-width: 1875px) {
-//    .profile-name {
-//        font-size: 78px !important;
-//    }
-//
-//    section {
-//        top: 250px !important;
-//    }
-//}
-//
-//@media (max-width: 1780px) {
-//    .vertical-letters {
-//        font-size: 54px !important;
-//    }
-//
-//    .profile-name {
-//        font-size: 56px !important;
-//    }
-//
-//    .profile-profession {
-//        font-size: 44px !important;
-//    }
-//
-//    .profile-shadows {
-//        top: 250px !important;
-//    }
-//
-//    .profile-img {
-//        top: 300px !important;
-//    }
-//
-//    section {
-//        top: 220px !important;
-//    }
-//}
-//
-//@media (max-width: 1680px) {
-//
-//    .profile-shadows {
-//        top: 220px !important;
-//    }
-//
-//    .profile-img {
-//        top: 270px !important;
-//    }
-//    section {
-//        top: 190px !important;
-//    }
-//}
-//
-//@media (max-width: 1571px) {
-//    .vertical-letters {
-//        font-size: 54px !important;
-//    }
-//
-//    .profile-name {
-//        font-size: 48px !important;
-//    }
-//
-//    .profile-profession {
-//        font-size: 44px !important;
-//    }
-//
-//    section {
-//        top: 160px !important;
-//    }
-//}
-//
-//@media (max-width: 1500px) {
-//
-//    .profile-shadows {
-//        top: 180px !important;
-//    }
-//
-//    .profile-img {
-//        top: 230px !important;
-//    }
-//
-//    section {
-//        top: 120px !important;
-//    }
-//}
-//
-
-
-//@media (max-width: 1400px) {
-//
-//    .profile-shadows {
-//        top: 220px !important;
-//    }
-//
-//    .profile-img {
-//        top: 300px !important;
-//        width: 95%;
-//        left: -250px !important;
-//    }
-//
-//    section {
-//        top: 90px !important;
-//    }
-//}
-//
-//@media (max-width: 1280px) {
-//
-//    .profile-shadows {
-//        width: 660px !important;
-//    }
-//
-//    .profile-img {
-//        top: 350px !important;
-//    }
-//
-//    section {
-//        top: 60px !important;
-//    }
-//}
-//
-//@media (max-width: 1075px) {
-//
-//    .profile-img {
-//        top: 400px !important;
-//    }
-//
-//    section {
-//        top: 30px !important;
-//    }
-//}
-//
-//@media (max-width: 970px) {
-//
-//    .intro-box {
-//        left: 100px;
-//        right: 0;
-//        top: 800px;
-//        z-index: 4;
-//        width: 100vw;
-//        justify-content: unset;
-//    }
-//
-//    section {
-//        top: 300px !important;
-//         }
-//
-//    .profile-shadows {
-//        width: 660px !important;
-//        left: 96px !important;
-//        position: unset;
-//    }
-//
-//    .profile-img {
-//        top: 210px !important;
-//        left: -222 !important;
-//        height: 800px !important;
-//        width: fit-content !important;
-//    }
-//
-//    .scroll-down-div {
-//        display: none;
-//    }
-//}
-//
-//@media (max-width: 890px) {
-//    .profile-img {
-//        top: 170px !important;
-//        height: 800px !important;
-//        width: fit-content !important;
-//    }
-//
-//    .profile-shadows {
-//        top: 100px !important;
-//    }
-//}
-//
-//@media (max-width: 710px) {
-//    .background-form {
-//        top: 650px !important;
-//    }
-//
-//    .intro-box {
-//        left: 30px;
-//    }
-//}
-//
-//@media (max-width: 630px) {
-//    .profile-img {
-//        top: 200px !important;
-//        left: -300px !important;
-//    }
-//
-//    .background-form {
-//        top: 700px !important;
-//    }
-//
-//    #email {
-//        display: none;
-//    }
-//
-//    .vertical-letters {
-//        font-size: 30px !important;
-//        line-height: 0 !important;
-//        padding-right: 88px;
-//        padding-top: 104px;
-//
-//    }
-//
-//    .profile-name {
-//        font-size: 40px !important;
-//        line-height: 2px !important;
-//        padding-top: 72px;
-//    }
-//
-//    .profile-profession {
-//        font-size: 32px !important;
-//    }
-//
-//    .btn {
-//        padding-top: 5px;
-//    }
-//
-//    .contact-line {
-//        top: 200px !important;
-//    }
-//}
-//
-//@media (max-width: 560px) {
-//    .profile-img {
-//        left: -380px !important;
-//    }
-//
-//    .profile-shadows {
-//        left: -40px !important;
-//    }
-//
-//    .intro-box {
-//        left: 0px;
-//    }
-//}
-//
-//@media (max-width: 500px) {
-//    .intro-box {
-//        left: -72px;
-//    }
-//
-//    .vertical-letters {
-//        font-size: 24px !important;
-//        line-height: 0 !important;
-//        padding-right: 100px;
-//        padding-top: 104px;
-//
-//    }
-//
-//    .profile-name {
-//        font-size: 32px !important;
-//        line-height: 2px !important;
-//        padding-top: 80px;
-//        font-weight: 600;
-//    }
-//
-//    .profile-profession {
-//        font-size: 24px !important;
-//    }
-//
-//    button {
-//        width: 120px;
-//        padding: 15px;
-//        font-size: 16px !important;
-//        line-height: 16px;
-//    }
-//}
-//
-//@media (max-width: 420px) {
-//    .profile-img {
-//        left: -250px !important;
-//        height: 547px !important;
-//        top: 430px !important;
-//    }
-//
-//    .profile-shadows {
-//        left: -40px !important;
-//    }
-//
-//    .background-form {
-//        top: 770px !important;
-//    }
-//
-//    .intro-box {
-//        right: 0 !important;
-//    }
-//
-//    .vertical-letters {
-//        font-size: 18px !important;
-//        line-height: 0 !important;
-//        padding-right: 118px;
-//        padding-top: 132px;
-//    }
-//
-//    .profile-name {
-//        font-size: 24px !important;
-//        line-height: 2px !important;
-//        padding-top: 80px;
-//        font-weight: 600 !important;
-//    }
-//
-//    .profile-profession {
-//        font-size: 18px !important;
-//        line-height: 40px !important;
-//    }
-//
-//    button {
-//        width: 102px;
-//        padding: 15px;
-//        font-size: 16px !important;
-//        line-height: 14px;
-//    }
-//
-//    .btn {
-//        right: 50px !important;
-//    }
-//
-//    .contact-line {
-//        top: 150px !important;
-//    }
-//}
-
-//.container {
-//    width: 50%;  /* oder eine feste Breite */
-//    height: auto; /* passt sich der Höhe des Bildes an */
-//    display: flex; /* Damit das Bild und andere Inhalte (falls vorhanden) richtig ausgerichtet werden */
-//    justify-content: center; /* Zentriert das Bild horizontal */
-//    align-items: center; /* Zentriert das Bild vertikal */
-//    border: solid 2px red;
-//}
-//
-//.container img {
-//    width: 100%; /* Macht das Bild so breit wie seinen Container */
-//    height: auto; /* Erhält die Proportionen des Bildes */
-//    max-width: 100%; /* Verhindert, dass das Bild größer als sein Container wird */
-//}
-
 .main-container {
     position: relative;
 }
@@ -382,7 +42,7 @@
 
 .vertical-letters {
     width: 152px;
-    height: 30px;
+    height: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
@@ -394,11 +54,11 @@
 .profile-text {
     display: flex;
     flex-direction: column;
-    height: 172px;
+    height: 132px;
 }
 
 .profile-name {
-    height: 108px;
+    height: 87px;
     font-weight: 700;
     font-size: 67px;
     line-height: 120%;
@@ -549,19 +209,18 @@ button {
         height: 70px;
 
         .vertical-letters {
-            height: 0;
             font-size: 45px;
             line-height: unset;
         }
 
         .profile-text {
-            height: 100px;
+            height: 60px;
         }
 
         .profile-name {
             font-size: 56px;
             line-height: unset;
-            height: 70px;
+            height: 57px;
         }
 
         .profile-profession {
@@ -583,6 +242,10 @@ button {
     .contact-line {
         top: 0;
     }
+
+    .btn {
+        padding-top: 35px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -600,7 +263,7 @@ button {
         right: 30px;
 
         .vertical-letters {
-            font-size: 32px;
+            font-size: 39px;
             width: 100px;
         }
 
@@ -657,23 +320,23 @@ button {
 
     .vertical-letters {
         width: 152px !important;
-        height: 30px !important;
+        height: 12px !important;
         font-style: normal !important;
         font-weight: 400 !important;
-        font-size: 64px !important;
+        font-size: 57px !important;
         line-height: 120% !important;
         transform: rotate(-90deg) !important;
-        flex: none !important;
+        //flex: none !important;
     }
 
     .profile-text {
         display: flex !important;
         flex-direction: column !important;
-        height: 172px !important;
+        height: 113px !important;
     }
 
     .profile-name {
-        height: 108px !important;
+        height: 80px !important;
         font-weight: 700 !important;
         font-size: 67px !important;
         line-height: 120% !important;
@@ -693,7 +356,7 @@ button {
         display: flex !important;
         justify-content: center !important;
         width: 100% !important;
-        padding-top: 56px !important;
+        padding-top: 35px !important;
     }
 
     button {
@@ -719,19 +382,19 @@ button {
         //right: 30px !important;
 
         .vertical-letters {
-            font-size: 32px !important;
+            font-size: 38px !important;
             width: 100px !important;
             height: 0 !important;
         }
 
         .profile-text {
-            height: 90px !important;
+            height: 76px !important;
         }
 
         .profile-name {
             font-size: 42px !important;
             line-height: unset !important;
-            height: 56px !important;
+            height: 48px !important;
         }
 
         .profile-profession {
@@ -795,12 +458,12 @@ button {
         }
 
         .profile-text {
-            height: 80px !important;
+            height: 56px !important;
         }
 
         .profile-name {
             font-size: 30px !important;
-            height: 43px !important;
+            height: 32px !important;
         }
 
         .profile-profession {

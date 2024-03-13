@@ -42,7 +42,7 @@
 
 .vertical-letters {
   width: 152px;
-  height: 30px;
+  height: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -54,11 +54,11 @@
 .profile-text {
   display: flex;
   flex-direction: column;
-  height: 172px;
+  height: 132px;
 }
 
 .profile-name {
-  height: 108px;
+  height: 87px;
   font-weight: 700;
   font-size: 67px;
   line-height: 120%;
@@ -197,17 +197,16 @@ button:hover {
     height: 70px;
   }
   .intro-box .vertical-letters {
-    height: 0;
     font-size: 45px;
     line-height: unset;
   }
   .intro-box .profile-text {
-    height: 100px;
+    height: 60px;
   }
   .intro-box .profile-name {
     font-size: 56px;
     line-height: unset;
-    height: 70px;
+    height: 57px;
   }
   .intro-box .profile-profession {
     font-size: 36px;
@@ -224,6 +223,9 @@ button:hover {
   .contact-line {
     top: 0;
   }
+  .btn {
+    padding-top: 35px;
+  }
 }
 @media (max-width: 1000px) {
   .container img {
@@ -239,7 +241,7 @@ button:hover {
     right: 30px;
   }
   .intro-box .vertical-letters {
-    font-size: 32px;
+    font-size: 39px;
     width: 100px;
   }
   .intro-box .profile-text {
@@ -285,21 +287,20 @@ button:hover {
   }
   .vertical-letters {
     width: 152px !important;
-    height: 30px !important;
+    height: 12px !important;
     font-style: normal !important;
     font-weight: 400 !important;
-    font-size: 64px !important;
+    font-size: 57px !important;
     line-height: 120% !important;
     transform: rotate(-90deg) !important;
-    flex: none !important;
   }
   .profile-text {
     display: flex !important;
     flex-direction: column !important;
-    height: 172px !important;
+    height: 113px !important;
   }
   .profile-name {
-    height: 108px !important;
+    height: 80px !important;
     font-weight: 700 !important;
     font-size: 67px !important;
     line-height: 120% !important;
@@ -315,7 +316,7 @@ button:hover {
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
-    padding-top: 56px !important;
+    padding-top: 35px !important;
   }
   button {
     width: 165px !important;
@@ -336,17 +337,17 @@ button:hover {
     height: 32px !important;
   }
   .intro-box .vertical-letters {
-    font-size: 32px !important;
+    font-size: 38px !important;
     width: 100px !important;
     height: 0 !important;
   }
   .intro-box .profile-text {
-    height: 90px !important;
+    height: 76px !important;
   }
   .intro-box .profile-name {
     font-size: 42px !important;
     line-height: unset !important;
-    height: 56px !important;
+    height: 48px !important;
   }
   .intro-box .profile-profession {
     font-size: 32px !important;
@@ -398,11 +399,11 @@ button:hover {
     width: 70px !important;
   }
   .intro-box .profile-text {
-    height: 80px !important;
+    height: 56px !important;
   }
   .intro-box .profile-name {
     font-size: 30px !important;
-    height: 43px !important;
+    height: 32px !important;
   }
   .intro-box .profile-profession {
     font-size: 24px !important;
