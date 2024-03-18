@@ -1,6 +1,7 @@
 // Import Component decorator, Input and OnInit interface from Angular core library
 import {Component, Input, OnInit} from '@angular/core';
 import * as AOS from 'aos';
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
 
 
 /**
@@ -10,11 +11,14 @@ import * as AOS from 'aos';
 @Component({
     selector: 'app-projects', // Defines the custom element name for this component
     standalone: true, // Indicates that the component is standalone, meaning it can be used without an NgModule
-    imports: [], // Specifies an array of imports that are used within the component's template
+    imports: [TranslateModule], // Specifies an array of imports that are used within the component's template
     templateUrl: './projects.component.html', // Path to the HTML file associated with this component
     styleUrls: ['./projects.component.scss'] // Path to the style file associated with this component
 })
 export class ProjectsComponent implements OnInit {
+    constructor(private translateService: TranslateService) {
+    }
+
     /**
      * Input property to accept project data from parent component.
      */

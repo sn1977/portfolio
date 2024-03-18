@@ -1,6 +1,7 @@
 // Import the Component decorator from the Angular core library and CommonModule for common directives
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
 
 /**
  * Component decorator that attaches metadata to the MySkillsComponent class,
@@ -9,11 +10,15 @@ import {CommonModule} from '@angular/common';
 @Component({
     selector: 'app-my-skills', // Defines the custom tag for this component
     standalone: true, // Marks this component as standalone, making it capable of being used independently
-    imports: [CommonModule], // Specifies CommonModule as an import for using common directives
+    imports: [CommonModule, TranslateModule], // Specifies CommonModule as an import for using common directives
     templateUrl: './my-skills.component.html', // Links to the HTML template file
     styleUrls: ['./my-skills.component.scss'] // Links to the SCSS stylesheet file
 })
 export class MySkillsComponent {
+
+    constructor(private translateService: TranslateService) {
+    }
+
     /**
      * An array holding information about skills including the file name of the image and the skill name.
      */
@@ -35,7 +40,7 @@ export class MySkillsComponent {
      * Scrolls the page to the contact section smoothly.
      */
     scrollToContact(): void {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'});
     }
 
 }

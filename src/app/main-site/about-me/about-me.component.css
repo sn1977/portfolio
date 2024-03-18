@@ -26,6 +26,10 @@ section {
   word-wrap: break-word;
 }
 
+span {
+  font-size: 18px;
+}
+
 .explanation-container {
   padding: 35px 0 0 35px;
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatDialogActions, MatDialogClose, MatDialogContent} from '@angular/material/dialog';
+import {TranslateModule} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-email-success-dialog',
@@ -7,7 +8,8 @@ import {MatDialogActions, MatDialogClose, MatDialogContent} from '@angular/mater
     imports: [
         MatDialogContent,
         MatDialogActions,
-        MatDialogClose
+        MatDialogClose,
+        TranslateModule
     ],
   templateUrl: './email-success-dialog.component.html',
   styleUrl: './email-success-dialog.component.scss'

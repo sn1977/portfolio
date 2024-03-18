@@ -7,12 +7,15 @@
             <span class="color-letter">a</span>
         </a>
     </div>
+    <nav>
+        <div class="navigation-bar">
+            <a href="#about-me">{{ "navigation.about"|translate }}</a>
+            <a href="#skills">{{ "navigation.skills"|translate }}</a>
+            <a href="#portfolio">Portfolio</a>
 
-    <div class="navigation-bar">
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-    </div>
+        </div>
+        <div class="language" (click)="switchLanguage()">{{ "navigation.language"|translate }}</div>
+    </nav>
 
     <label class="mobile-nav-bar" (click)="showMobileMenu()">
         <div [class.div1-change]="mobileMenu"></div>
@@ -20,10 +23,12 @@
         <div [class.div3-change]="mobileMenu"></div>
     </label>
 
-        <div *ngIf="mobileMenu" class="mobile-menu">
-            <a href="#about-me" (click)="closeMobileMenu()"><span class="header-link-mobile">About me</span></a>
-            <a href="#skills" (click)="closeMobileMenu()"><span class="header-link-mobile">Skills</span></a>
-            <a href="#portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>
-            <a href="#contact" (click)="closeMobileMenu()"><span class="header-link-mobile">Contact</span></a>
-        </div>
+    <div *ngIf="mobileMenu" class="mobile-menu">
+        <a href="#about-me" (click)="closeMobileMenu()"><span
+            class="header-link-mobile">{{ "navigation.about"|translate }}</span></a>
+        <a href="#skills" (click)="closeMobileMenu()"><span
+            class="header-link-mobile">{{ "navigation.skills"|translate }}</span></a>
+        <a href="#portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>
+        <a href="#contact" (click)="closeMobileMenu()"><span class="header-link-mobile">{{ "contact"|translate }}</span></a>
+    </div>
 </header>

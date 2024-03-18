@@ -1,19 +1,21 @@
 <div class="contact-container">
     <div class="blue-line"></div>
-    <h1>Contact</h1>
+    <h1>{{ "contact-section.headline"|translate }}</h1>
 </div>
 <div class="contact-main-container">
     <div class="contact-explanation">
-        <span class="contact-question">Got a problem to solve?</span>
-        <span class="contact-text">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
-        <span class="contact-text">Need a Frontend developer? <b>Contact me!</b></span>
+        <span class="contact-question">{{ "contact-section.question"|translate }}</span>
+        <span class="contact-text">{{ "contact-section.text-first-part"|translate }}</span>
+        <span class="contact-text">{{ "contact-section.text-second-part"|translate }}
+            <b>{{ "contact-section.text-third-part"|translate }}</b></span>
     </div>
 
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="input-div"
              [class.red-border]="contactForm.get('nameForm')?.invalid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
              [class.green-border]="contactForm.get('nameForm')?.valid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)">
-            <input type="text" formControlName="nameForm" placeholder="Your name">
+            <input type="text" formControlName="nameForm"
+                   [placeholder]="'contact-section.placeholder-name' | translate">
             <img class="done-icon"
                  *ngIf="contactForm.get('nameForm')?.valid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
                  ngSrc="/assets/icons/done-icon.png" height="26" width="25">
@@ -25,17 +27,18 @@
             *ngIf="contactForm.get('nameForm')?.invalid && contactForm.get('nameForm')?.touched || contactForm.get('nameForm')?.dirty">
             <span class="alert-letters"
                   *ngIf="contactForm.get('nameForm')?.errors?.['required']">
-                Your name is required
+                {{ "contact-section.name-alert"|translate }}
             </span>
             <span class="alert-letters" *ngIf="contactForm.get('nameForm')?.errors?.['minlength']">
-                Minimum 3 letters required
+                {{ "contact-section.minimum-letters"|translate }}
             </span>
         </div>
 
         <div class="input-div"
              [class.red-border]="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
              [class.green-border]="contactForm.get('emailForm')?.valid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
-            <input type="email" formControlName="emailForm" placeholder="Your email">
+            <input type="email" formControlName="emailForm"
+                   [placeholder]="'contact-section.placeholder-email' | translate">
             <img class="done-icon"
                  *ngIf="contactForm.get('emailForm')?.valid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
                  ngSrc="/assets/icons/done-icon.png" height="26" width="25">
@@ -47,16 +50,16 @@
             *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
             <span class="alert-letters"
                   *ngIf="contactForm.get('emailForm')?.errors?.['pattern']">
-                Valid email is required
+                {{ "contact-section.email-alert"|translate }}
             </span>
             <span class="alert-letters"
                   *ngIf="contactForm.get('emailForm')?.errors?.['email']">
-                Please enter a valid email address
+                {{ "contact-section.email-validation"|translate }}
             </span>
         </div>
 
         <div class="message-button-box">
-            <textarea formControlName="messageForm" placeholder="Your message"
+            <textarea formControlName="messageForm" [placeholder]="'contact-section.placeholder-textarea'|translate"
                       [class.red-border]="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
                       [class.green-border]="contactForm.get('messageForm')?.valid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"></textarea>
             <img class="done-icon"
@@ -67,7 +70,7 @@
                  ngSrc="/assets/icons/error-icon.png" height="26" width="26">
             <span class="alert-letters-textarea"
                   *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)">
-                Your message is empty or too short, please write at least 7 letters
+                {{ "contact-section.textarea-alert"|translate }}
             </span>
 
             <div class="privacy-submit-container">
@@ -78,9 +81,9 @@
                     </label>
                 </div>
                 <div>
-                <span>I've read the
-                    <a routerLink="/privacy-policy">privacy policy</a>
-                    and agree to the processing of my data as outlined.</span>
+                <span>{{ "contact-section.privacy-policy-first-part"|translate }}
+                    <a routerLink="/privacy-policy">{{ "contact-section.privacy-policy"|translate }}</a>
+                    {{ "contact-section.privacy-policy-second-part"|translate }}</span>
                 </div>
             </div>
 
@@ -91,7 +94,7 @@
                  (click)="showPrivacyAlert()"></div>
             <div class="btn-submit">
                 <button type="submit" [disabled]="!contactForm.valid || !contactForm.get('agreeToTerms')?.value"
-                        [class.btn-blue]="contactForm.valid && contactForm.get('agreeToTerms')?.value">Send message :)
+                        [class.btn-blue]="contactForm.valid && contactForm.get('agreeToTerms')?.value">{{ "contact-section.send-btn"|translate }}
                 </button>
             </div>
         </div>

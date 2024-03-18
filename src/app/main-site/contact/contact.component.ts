@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
+import {TranslateModule} from '@ngx-translate/core';
 import {EmailSuccessDialogComponent} from '../../email-success-dialog/email-success-dialog.component';
 
 /**
@@ -18,7 +19,8 @@ import {EmailSuccessDialogComponent} from '../../email-success-dialog/email-succ
         CommonModule, // Imports CommonModule for common Angular directives
         NgOptimizedImage, // Imports NgOptimizedImage for optimized image handling
         RouterLink, // Imports RouterLink for link navigation
-        EmailSuccessDialogComponent
+        EmailSuccessDialogComponent,
+        TranslateModule
     ],
     templateUrl: './contact.component.html', // Links to the HTML template file
     styleUrls: ['./contact.component.scss'] // Links to the SCSS stylesheet file

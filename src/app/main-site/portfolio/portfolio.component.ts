@@ -3,6 +3,7 @@ import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 // Import ProjectsComponent to be used within the portfolio component
 import {ProjectsComponent} from '../projects/projects.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 /**
  * Component decorator that attaches metadata to the PortfolioComponent class,
@@ -13,7 +14,9 @@ import {ProjectsComponent} from '../projects/projects.component';
     standalone: true, // Marks this component as standalone for easier reuse
     imports: [
         ProjectsComponent, // Includes ProjectsComponent for displaying individual projects
-        CommonModule // Imports CommonModule for using common Angular directives
+        CommonModule,
+        TranslateModule,
+        // Imports CommonModule for using common Angular directives
     ],
     templateUrl: './portfolio.component.html', // Links to the HTML template file
     styleUrls: ['./portfolio.component.scss'] // Links to the SCSS stylesheet file

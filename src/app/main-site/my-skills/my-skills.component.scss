@@ -13,6 +13,10 @@
     flex-wrap: wrap;
 }
 
+span {
+    font-size: 18px;
+}
+
 .skill-box {
     display: flex;
     flex-direction: column;
@@ -72,12 +76,18 @@
     align-items: center;
     flex-direction: column;
     margin-right: 100px;
-    width: 30%;
+    padding-right: 100px;
+    width: 40%;
 
     .headline-container {
         width: 100%;
         display: flex;
         justify-content: end;
+
+        h1 {
+            width: 100%;
+            font-size: 7vw;
+        }
     }
 
     .headline-my-skills {
@@ -86,6 +96,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100px;
 
         span {
             margin-top: 20px;
@@ -129,10 +140,10 @@ a {
 .blue-line {
     border: 2px solid #4b47ff;
     height: 0px;
-    width: 8%;
+    width: 12%;
     position: absolute;
     right: 0;
-    top: 285px;
+    top: 170px;
 }
 
 .background-form {
@@ -147,6 +158,10 @@ a {
     .skills-container {
         padding-left: 30px;
         flex-direction: column-reverse;
+    }
+
+    .blue-line {
+        width: 35%;
     }
 
     .headline {
@@ -183,12 +198,11 @@ a {
     }
 
     .blue-line {
-        top: 235px;
-        width: 12%;
+        width:30%;
     }
 }
 
-@media (max-width: 509px) {
+@media (max-width: 498px) {
     .btn-skills {
         bottom: -1100px;
     }
@@ -196,8 +210,8 @@ a {
 
 @media (max-width: 475px) {
     .blue-line {
-        top: 835px;
-        width: 15%;
+        top: 165px;
+        width: 25%;
     }
 }
 
@@ -207,12 +221,11 @@ a {
     }
 
     .blue-line {
-        top: 805px;
-        width: 20%;
+        width: 30%;
     }
 
     .btn-skills {
-        left: -10px;
+        left: -40px;
     }
 
     .btn-get-in-touch {
@@ -222,7 +235,7 @@ a {
     }
 }
 
-@media (max-width: 344px) {
+@media (max-width: 333px) {
     .btn-skills {
         bottom: -1900px;
         left: -20px;
