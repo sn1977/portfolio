@@ -14,9 +14,8 @@ import {TranslateModule} from '@ngx-translate/core';
     standalone: true, // Marks this component as standalone for easier reuse
     imports: [
         ProjectsComponent, // Includes ProjectsComponent for displaying individual projects
-        CommonModule,
+        CommonModule, // Imports CommonModule for using common Angular directives
         TranslateModule,
-        // Imports CommonModule for using common Angular directives
     ],
     templateUrl: './portfolio.component.html', // Links to the HTML template file
     styleUrls: ['./portfolio.component.scss'] // Links to the SCSS stylesheet file

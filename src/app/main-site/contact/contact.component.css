@@ -286,6 +286,11 @@ form input::placeholder, form textarea::placeholder {
     width: unset;
   }
 }
+@media (max-width: 870px) {
+  .contact-container {
+    margin-top: 100px;
+  }
+}
 @media (max-width: 500px) {
   h1 {
     font-size: 64px !important;

@@ -184,6 +184,50 @@ button:hover {
   position: unset;
 }
 
+@media (min-width: 1800px) {
+  .contact-line {
+    top: 250px;
+  }
+  .profile-img {
+    top: 50px !important;
+  }
+}
+@media (min-width: 1910px) {
+  .profile-img {
+    top: -85px !important;
+    height: 120% !important;
+  }
+  .background-form {
+    top: 370px;
+  }
+}
+@media (min-width: 1950px) {
+  .profile-img {
+    top: -30px !important;
+    height: 120% !important;
+  }
+}
+@media (min-width: 2160px) {
+  .profile-img {
+    top: -30px !important;
+    height: 130% !important;
+  }
+  .background-form {
+    top: 330px;
+  }
+  .intro-box {
+    top: 200px;
+  }
+}
+@media (min-width: 2300px) {
+  .profile-img {
+    top: -60px !important;
+    height: 140% !important;
+  }
+  .background-form {
+    top: 250px;
+  }
+}
 @media (max-width: 1350px) {
   .container {
     top: 85px;

@@ -10,10 +10,6 @@ import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-// export const appConfig: ApplicationConfig = {
-//   providers: [provideRouter(routes), provideClientHydration(), provideHttpClient(), provideAnimationsAsync()]
-// };
-
 export function HttpLoaderFactory(httpClient: HttpClient) {
     return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }

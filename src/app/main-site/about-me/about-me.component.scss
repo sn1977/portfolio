@@ -92,6 +92,12 @@ span {
     width: auto;
 }
 
+@media (min-width: 1800px) {
+    section {
+        padding-top: 350px;
+    }
+}
+
 @media (max-width: 1150px) {
     section {
         margin-top: 70px;
