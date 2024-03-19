@@ -5,7 +5,7 @@
     <div class="project-info">
         <h2>{{ project.name }}</h2>
         <span class="tec">{{ project.tec }}</span>
-        <span class="description">{{ project.description }}</span>
+        <span class="description">{{ 'projects.' + project.key + '.description' | translate }}</span>
         <div class="btn-container">
             <a href="{{ project.projectLink }}" target="_blank">
                 <button class="btn-live-test">Live test</button>

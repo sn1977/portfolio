@@ -28,6 +28,7 @@ export class PortfolioComponent {
      */
     public projects = [
         {
+            key: 'join',
             name: 'Join',
             img: 'join.png',
             tec: 'JavaScript | HTML | CSS',
@@ -36,6 +37,7 @@ export class PortfolioComponent {
             projectLink: 'https://join.sascha-nemeth.com'
         },
         {
+            key: 'elPolloLoco',
             name: 'El Pollo Loco',
             img: 'pollo-loco.png',
             tec: 'JavaScript | HTML | CSS',

@@ -1,5 +1,5 @@
 {
-    "navigation":  {
+    "navigation": {
         "about": "About me",
         "skills": "Skills",
         "language": "DE"
@@ -21,6 +21,14 @@
         "skill-btn": "Get in touch"
     },
     "portfolio-explanation-text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "projects": {
+        "join": {
+            "description": "Task manager inspired by the kanban system. Create and organize tasks using drag and drop functions, assign users and categories."
+        },
+        "elPolloLoco": {
+            "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the crazy hen."
+        }
+    },
     "contact-section": {
         "headline": "Contact",
         "question": "Got a problem to solve?",

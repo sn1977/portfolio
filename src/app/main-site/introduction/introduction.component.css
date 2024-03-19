@@ -199,6 +199,7 @@ button:hover {
   .intro-box .vertical-letters {
     font-size: 45px;
     line-height: unset;
+    width: 104px;
   }
   .intro-box .profile-text {
     height: 60px;
@@ -206,7 +207,7 @@ button:hover {
   .intro-box .profile-name {
     font-size: 56px;
     line-height: unset;
-    height: 57px;
+    height: 48px;
   }
   .intro-box .profile-profession {
     font-size: 36px;
@@ -242,7 +243,7 @@ button:hover {
   }
   .intro-box .vertical-letters {
     font-size: 39px;
-    width: 100px;
+    width: 77px;
   }
   .intro-box .profile-text {
     height: 82px;
@@ -342,12 +343,12 @@ button:hover {
     height: 0 !important;
   }
   .intro-box .profile-text {
-    height: 76px !important;
+    height: 50px !important;
   }
   .intro-box .profile-name {
     font-size: 42px !important;
     line-height: unset !important;
-    height: 48px !important;
+    height: 32px !important;
   }
   .intro-box .profile-profession {
     font-size: 32px !important;
@@ -395,7 +396,7 @@ button:hover {
     top: -250px;
   }
   .intro-box .vertical-letters {
-    font-size: 26px !important;
+    font-size: 30px !important;
     width: 70px !important;
   }
   .intro-box .profile-text {

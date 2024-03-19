@@ -20,6 +20,14 @@
         "skill-btn": "Kontakt"
     },
     "portfolio-explanation-text": "Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "projects": {
+        "join": {
+            "description": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+        },
+        "elPolloLoco": {
+            "description": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Salsa-Flaschen zu finden, um gegen das verrückte Huhn zu kämpfen."
+        }
+    },
     "contact-section": {
         "headline": "Kontakt",
         "question": "Haben Sie ein Problem zu lösen?",
