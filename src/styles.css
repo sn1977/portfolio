@@ -158,8 +158,8 @@ body {
 }
 
 .content-container {
-  margin: 0 auto; /* Zentriert den Container horizontal */
-  width: 100%; /* Stellt sicher, dass der Container sich auf kleinere Bildschirme ausdehnt */
+  margin: 0 auto;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -169,15 +169,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #4b47ff; /* Farbe des Hintergrunds des Scrollbars */
+  background: #4b47ff; /* Color of the scrollbar background */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00bee8; /* Farbe des Scrollbars selbst */
+  background: #00bee8; /* Color of the scrollbar itself */
   border-radius: 16px;
 }
 
-/* Ändern der Farbe beim Überfahren des Scrollbars mit der Maus */
+/* Changing the color when hovering over the scrollbar with the mouse */
 ::-webkit-scrollbar-thumb:hover {
   background: #00bee8;
 }

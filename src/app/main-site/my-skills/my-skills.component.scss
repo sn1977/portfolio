@@ -1,11 +1,14 @@
 .skills-container {
     display: flex;
-    width: 100%;
     position: relative;
     padding-left: 100px;
     padding-top: 150px;
     color: #FFFFFF;
     z-index: 5;
+    max-width: 1920px; // Sets the maximum width of the container
+    margin: 0 auto; // Centers the container horizontally
+    width: 100%; // Ensures the container takes up full width on smaller screens
+    box-sizing: border-box; // Ensures that padding and border are contained within the specified width
 }
 
 .skills {
@@ -76,7 +79,6 @@ span {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-right: 100px;
     padding-right: 100px;
     width: 40%;
 
@@ -141,11 +143,12 @@ a {
 }
 
 .blue-line {
-    border: 2px solid #4b47ff;
-    height: 0px;
-    width: 12%;
     position: absolute;
     right: 0;
+    border: 2px solid #4b47ff;
+    width: 200px;
+    height: 0;
+    z-index: 2;
     top: 170px;
 }
 
@@ -155,6 +158,24 @@ a {
     left: -600px;
     bottom: -300px;
     z-index: -1;
+}
+
+@media (min-width: 2200px) {
+    .headline-my-skills {
+        font-size: 4vw !important;
+    }
+}
+
+@media (min-width: 2800px) {
+    .headline-my-skills {
+        font-size: 3vw !important;
+    }
+}
+
+@media (max-width: 1625px) {
+    .blue-line {
+        width: 150px;
+    }
 }
 
 @media (max-width: 970px) {
@@ -169,6 +190,7 @@ a {
 
     .headline {
         width: 100%;
+        padding-right: 0;
 
         h1 {
             padding-right: 100px;
@@ -191,6 +213,13 @@ a {
     }
 }
 
+@media (max-width: 693px) {
+
+    .btn-skills {
+        bottom: -750px;
+    }
+}
+
 @media (max-width: 674px) {
     h1 {
         font-size: 40px !important;
@@ -199,13 +228,9 @@ a {
     .btn-skills {
         bottom: -750px;
     }
-
-    .blue-line {
-        width: 25%;
-    }
 }
 
-@media (max-width: 498px) {
+@media (max-width: 528px) {
     .btn-skills {
         bottom: -1100px;
     }

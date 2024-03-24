@@ -8,8 +8,5 @@ import {TranslateModule, TranslateService} from '@ngx-translate/core';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent {
+export class AboutMeComponent {}
 
-    // constructor(private translateService: TranslateService) {
-    // }
-}

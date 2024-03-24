@@ -1,9 +1,9 @@
 // Import necessary Angular core modules, form controls and validators, and common modules
-import { Component, inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import {Component, inject, OnInit} from '@angular/core';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {RouterLink} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {TranslateModule} from '@ngx-translate/core';
 import {EmailSuccessDialogComponent} from '../../email-success-dialog/email-success-dialog.component';
@@ -25,7 +25,7 @@ import {EmailSuccessDialogComponent} from '../../email-success-dialog/email-succ
     templateUrl: './contact.component.html', // Links to the HTML template file
     styleUrls: ['./contact.component.scss'] // Links to the SCSS stylesheet file
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent{
     /**
      * Indicates whether a submit attempt has been made.
      */
@@ -48,27 +48,19 @@ export class ContactComponent implements OnInit {
     });
 
     /**
-     * Initializes component logic and subscriptions to form value changes.
-     */
-    ngOnInit() {
-        // Subscribing to form value changes to log them to the console.
-        this.contactForm.get('nameForm')?.valueChanges.subscribe(value => {
-            console.log('Name changed: ', value);
-        });
-        this.contactForm.get('emailForm')?.valueChanges.subscribe(value => {
-            console.log('Email changed: ', value);
-        });
-        this.contactForm.get('messageForm')?.valueChanges.subscribe(value => {
-            console.log('Message changed: ', value);
-        });
-    }
-
-    /**
      * Scrolls to the contact section of the page.
      */
     scrollToContact(): void {
-        document.getElementById('start-page')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('start-page')?.scrollIntoView({behavior: 'smooth'});
     }
+
+    checkFormAndShowAlert() {
+        // Überprüfen Sie, ob das Formular invalide ist und die Zustimmung nicht gegeben wurde
+        if (!this.contactForm.valid || !this.contactForm.get('agreeToTerms')?.value) {
+            this.showPrivacyAlert();
+        }
+    }
+
 
     /**
      * Sets the submitAttempted flag to true to display warning messages.
@@ -80,7 +72,8 @@ export class ContactComponent implements OnInit {
     // Injection of the HttpClient service for making HTTP requests
     http = inject(HttpClient);
 
-    constructor(private dialog: MatDialog) {}
+    constructor(private dialog: MatDialog) {
+    }
 
     /**
      * Handles form submission, sending form data if valid, and logging response.

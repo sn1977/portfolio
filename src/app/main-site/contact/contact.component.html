@@ -1,106 +1,107 @@
-<div class="contact-container">
-    <div class="blue-line"></div>
-    <h1>{{ "contact-section.headline"|translate }}</h1>
-</div>
-<div class="contact-main-container">
-    <div class="contact-explanation">
-        <span class="contact-question">{{ "contact-section.question"|translate }}</span>
-        <span class="contact-text">{{ "contact-section.text-first-part"|translate }}</span>
-        <span class="contact-text">{{ "contact-section.text-second-part"|translate }}
-            <b>{{ "contact-section.text-third-part"|translate }}</b></span>
+<div id="contact">
+    <div class="contact-container">
+        <div class="blue-line"></div>
+        <h1>{{ "contact-section.headline"|translate }}</h1>
     </div>
-
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <div class="input-div"
-             [class.red-border]="contactForm.get('nameForm')?.invalid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
-             [class.green-border]="contactForm.get('nameForm')?.valid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)">
-            <input type="text" formControlName="nameForm"
-                   [placeholder]="'contact-section.placeholder-name' | translate">
-            <img class="done-icon"
-                 *ngIf="contactForm.get('nameForm')?.valid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
-                 ngSrc="/assets/icons/done-icon.png" height="26" width="25">
-            <img class="error-icon"
-                 *ngIf="contactForm.get('nameForm')?.invalid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
-                 ngSrc="/assets/icons/error-icon.png" height="26" width="26">
+    <div class="contact-main-container">
+        <div class="contact-explanation">
+            <span class="contact-question">{{ "contact-section.question"|translate }}</span>
+            <span class="contact-text">{{ "contact-section.text-first-part"|translate }}</span>
+            <span class="contact-text">{{ "contact-section.text-second-part"|translate }}
+                <b>{{ "contact-section.text-third-part"|translate }}</b></span>
         </div>
-        <div
-            *ngIf="contactForm.get('nameForm')?.invalid && contactForm.get('nameForm')?.touched || contactForm.get('nameForm')?.dirty">
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="input-div"
+                 [class.red-border]="contactForm.get('nameForm')?.invalid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
+                 [class.green-border]="contactForm.get('nameForm')?.valid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)">
+                <input type="text" formControlName="nameForm"
+                       [placeholder]="'contact-section.placeholder-name' | translate">
+                <img class="done-icon"
+                     *ngIf="contactForm.get('nameForm')?.valid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
+                     ngSrc="/assets/icons/done-icon.png" height="26" width="25">
+                <img class="error-icon"
+                     *ngIf="contactForm.get('nameForm')?.invalid && (contactForm.controls['nameForm'].dirty || contactForm.get('nameForm')?.touched)"
+                     ngSrc="/assets/icons/error-icon.png" height="26" width="26">
+            </div>
+            <div
+                *ngIf="contactForm.get('nameForm')?.invalid && contactForm.get('nameForm')?.touched || contactForm.get('nameForm')?.dirty">
             <span class="alert-letters"
                   *ngIf="contactForm.get('nameForm')?.errors?.['required']">
                 {{ "contact-section.name-alert"|translate }}
             </span>
-            <span class="alert-letters" *ngIf="contactForm.get('nameForm')?.errors?.['minlength']">
+                <span class="alert-letters" *ngIf="contactForm.get('nameForm')?.errors?.['minlength']">
                 {{ "contact-section.minimum-letters"|translate }}
             </span>
-        </div>
+            </div>
 
-        <div class="input-div"
-             [class.red-border]="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
-             [class.green-border]="contactForm.get('emailForm')?.valid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
-            <input type="email" formControlName="emailForm"
-                   [placeholder]="'contact-section.placeholder-email' | translate">
-            <img class="done-icon"
-                 *ngIf="contactForm.get('emailForm')?.valid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
-                 ngSrc="/assets/icons/done-icon.png" height="26" width="25">
-            <img class="error-icon"
-                 *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
-                 ngSrc="/assets/icons/error-icon.png" height="26" width="26">
-        </div>
-        <div
-            *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
+            <div class="input-div"
+                 [class.red-border]="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
+                 [class.green-border]="contactForm.get('emailForm')?.valid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
+                <input type="email" formControlName="emailForm"
+                       [placeholder]="'contact-section.placeholder-email' | translate">
+                <img class="done-icon"
+                     *ngIf="contactForm.get('emailForm')?.valid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
+                     ngSrc="/assets/icons/done-icon.png" height="26" width="25">
+                <img class="error-icon"
+                     *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)"
+                     ngSrc="/assets/icons/error-icon.png" height="26" width="26">
+            </div>
+            <div
+                *ngIf="contactForm.get('emailForm')?.invalid && (contactForm.controls['emailForm'].dirty || contactForm.get('emailForm')?.touched)">
             <span class="alert-letters"
                   *ngIf="contactForm.get('emailForm')?.errors?.['pattern']">
                 {{ "contact-section.email-alert"|translate }}
             </span>
-            <span class="alert-letters"
-                  *ngIf="contactForm.get('emailForm')?.errors?.['email']">
+                <span class="alert-letters"
+                      *ngIf="contactForm.get('emailForm')?.errors?.['email']">
                 {{ "contact-section.email-validation"|translate }}
             </span>
-        </div>
+            </div>
 
-        <div class="message-button-box">
+            <div class="message-button-box">
             <textarea formControlName="messageForm" [placeholder]="'contact-section.placeholder-textarea'|translate"
                       [class.red-border]="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
                       [class.green-border]="contactForm.get('messageForm')?.valid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"></textarea>
-            <img class="done-icon"
-                 *ngIf="contactForm.get('messageForm')?.valid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
-                 ngSrc="/assets/icons/done-icon.png" height="26" width="25">
-            <img class="error-icon"
-                 *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
-                 ngSrc="/assets/icons/error-icon.png" height="26" width="26">
-            <span class="alert-letters-textarea"
-                  *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)">
+                <img class="done-icon"
+                     *ngIf="contactForm.get('messageForm')?.valid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
+                     ngSrc="/assets/icons/done-icon.png" height="26" width="25">
+                <img class="error-icon"
+                     *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)"
+                     ngSrc="/assets/icons/error-icon.png" height="26" width="26">
+                <span class="alert-letters-textarea"
+                      *ngIf="contactForm.get('messageForm')?.invalid && (contactForm.controls['messageForm'].dirty || contactForm.get('messageForm')?.touched)">
                 {{ "contact-section.textarea-alert"|translate }}
             </span>
 
-            <div class="privacy-submit-container">
-                <div>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" formControlName="agreeToTerms" hidden>
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div>
+                <div class="privacy-submit-container">
+                    <div>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" formControlName="agreeToTerms" hidden>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
                 <span>{{ "contact-section.privacy-policy-first-part"|translate }}
                     <a routerLink="/privacy-policy">{{ "contact-section.privacy-policy"|translate }}</a>
                     {{ "contact-section.privacy-policy-second-part"|translate }}</span>
+                    </div>
+                </div>
+
+                <span class="alert-privacy-policy"
+                      [class.d-none]="contactForm.get('agreeToTerms')?.value || !submitAttempted">Please accept the privacy policy</span>
+
+                <div class="btn-submit-overlay" *ngIf="!contactForm.get('agreeToTerms')?.value && submitAttempted"
+                     (click)="checkFormAndShowAlert()"></div>
+                <div class="btn-submit">
+                    <button type="submit" [disabled]="!contactForm.valid || !contactForm.get('agreeToTerms')?.value"
+                            [class.btn-blue]="contactForm.valid && contactForm.get('agreeToTerms')?.value">{{ "contact-section.send-btn"|translate }}
+                    </button>
                 </div>
             </div>
-
-            <span class="alert-privacy-policy"
-                  [class.d-none]="contactForm.get('agreeToTerms')?.value || !submitAttempted">Please accept the privacy policy</span>
-
-            <div class="btn-submit-overlay" *ngIf="!contactForm.get('agreeToTerms')?.value"
-                 (click)="showPrivacyAlert()"></div>
-            <div class="btn-submit">
-                <button type="submit" [disabled]="!contactForm.valid || !contactForm.get('agreeToTerms')?.value"
-                        [class.btn-blue]="contactForm.valid && contactForm.get('agreeToTerms')?.value">{{ "contact-section.send-btn"|translate }}
-                </button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
-
 <div class="scroll-up" (click)="scrollToContact()">
     <img src="/assets/icons/arrow-up-circle.png">
 </div>

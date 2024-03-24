@@ -1,4 +1,5 @@
 <header class="header content-container">
+    <div class="header-content"> <!-- Start of centered content -->
     <div class="logo">
         <a href="#start-page">
             <span class="logo-letters">S</span>
@@ -12,7 +13,6 @@
             <a href="#about-me">{{ "navigation.about"|translate }}</a>
             <a href="#skills">{{ "navigation.skills"|translate }}</a>
             <a href="#portfolio">Portfolio</a>
-
         </div>
         <div class="language" (click)="switchLanguage()">{{ "navigation.language"|translate }}</div>
     </nav>
@@ -31,4 +31,5 @@
         <a href="#portfolio" (click)="closeMobileMenu()"><span class="header-link-mobile">Portfolio</span></a>
         <a href="#contact" (click)="closeMobileMenu()"><span class="header-link-mobile">{{ "contact"|translate }}</span></a>
     </div>
+    </div> <!-- End of centered content -->
 </header>

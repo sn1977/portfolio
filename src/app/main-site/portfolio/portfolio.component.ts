@@ -22,7 +22,7 @@ import {TranslateModule} from '@ngx-translate/core';
 })
 export class PortfolioComponent {
     /**
-     * Public array holding the projects' information such as name, image, technology used, description,
+     * Public array holding the projects' information such as key, name, image, technology used, description,
      * and links to the GitHub repository and the project's live version.
      */
     public projects = [

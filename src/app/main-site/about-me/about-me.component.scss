@@ -6,11 +6,16 @@ section {
     padding-top: 120px;
     max-height: max-content;
     z-index: 4;
+    max-width: 1920px; // Sets the maximum width of the container
+    margin: 0 auto; // Centers the container horizontally
+    width: 100%; // Ensures the container takes up full width on smaller screens
+    box-sizing: border-box; // Ensures that padding and border are contained within the specified width
+
 }
 
 .about-me-container {
     min-height: auto;
-    max-width: 100%; // Makes the width of the container more flexible
+    max-width: 50%; // Makes the width of the container more flexible
     overflow: hidden; // Prevents content from overflowing outside the container
     padding-right: 32px;
 
@@ -77,24 +82,38 @@ span {
 }
 
 .blue-line {
+    position: absolute;
+    right: 0;
     border: 2px solid #00BEE8;
-    width: 34%;
+    width: 100px;
     height: 0;
     z-index: 2;
 }
 
 .shadow-blue {
     position: absolute;
-    right: -260px;
+    right: -7px;
     top: -95px;
     z-index: 3;
     height: 450px;
     width: auto;
 }
 
+@media (min-width: 1921px) {
+    .round-img-container {
+        padding-right: 100px;
+    }
+}
+
 @media (min-width: 1800px) {
     section {
         padding-top: 350px;
+    }
+}
+
+@media (max-width: 1920px) {
+    .round-img-container {
+        padding-right: 100px;
     }
 }
 
@@ -109,16 +128,20 @@ span {
     .round-img-container img {
         width: 300px;
     }
-
-    .blue-line {
-        width: 20%;
-    }
 }
 
 @media (max-width: 970px) {
     section {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .round-img-container {
+        padding-right: 30px;
+    }
+
+    .blue-line {
+        width: 60px;
     }
 }
 
@@ -128,11 +151,12 @@ span {
     }
 
     .shadow-blue {
-        z-index: -1;
+        display: none;
     }
 
     .about-me-container {
         padding-right: 0;
+        max-width: 100%;
     }
 }
 

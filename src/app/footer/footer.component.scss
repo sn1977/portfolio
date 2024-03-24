@@ -11,7 +11,7 @@ footer {
     padding-bottom: 100px;
     position: relative;
 
-    div:nth-child(1) {
+    .logo {
         flex-direction: column;
         display: flex;
         z-index: 4;
@@ -51,6 +51,16 @@ footer {
     }
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1920px; // Setzt die maximale Breite des Containers
+    margin: 0 auto; // Zentriert den Container horizontal
+    width: 100%; // Stellt sicher, dass der Container auf kleineren Bildschirmen die volle Breite einnimmt
+    box-sizing: border-box; // Stellt sicher, dass Padding und Border innerhalb der angegebenen Breite enthalten sind
+    padding-left: 100px;
+}
+
 a {
     text-decoration: none;
     color: #ffffff;
@@ -73,6 +83,12 @@ a {
     z-index: 4;
 }
 
+@media (max-width: 1920px) {
+    .footer-content {
+        padding-left: 0;
+    }
+}
+
 @media (max-width: 970px) {
     footer {
         padding-left: 30px;
@@ -83,8 +99,9 @@ a {
 }
 
 @media (max-width: 800px) {
-    footer {
+    .footer-content {
         flex-direction: column;
+        align-items: center;
     }
 
     .logo {
@@ -98,12 +115,12 @@ a {
 
     .icons {
         position: relative;
-        top: -30px;
+        top: 0;
     }
 
     .imprint {
         position: relative;
-        bottom: -190px;
+        bottom: -140px;
         display: flex;
         justify-content: center;
         margin-bottom: 32px;

@@ -24,6 +24,17 @@ header {
     }
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1920px; // Sets the maximum width of the container
+    margin: 0 auto; // Centers the container horizontally
+    width: 100%; // Ensures the container takes up full width on smaller screens
+    box-sizing: border-box; // Ensures that padding and border are contained within the specified width
+    padding-left: 100px;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -34,6 +45,7 @@ nav {
     color: #00bee8;
     font-size: 24px;
     transition: transform 0.3s ease-in-out;
+    padding-right: 30px;
 
     &:hover {
         cursor: pointer;
@@ -97,7 +109,7 @@ a {
 
 label {
     position: absolute;
-    top: 65px;
+    top: 24px;
     right: 30px;
     display: block;
     width: 40px;
@@ -144,12 +156,22 @@ label div {
         width: calc(100% - 60px);
     }
 
+    .header-content {
+        padding-right: 100px;
+    }
+
     .navigation-bar {
         padding-right: 0 !important;
     }
 
     .mobile-menu {
         margin-left: -30px;
+    }
+}
+
+@media (max-width: 1920px) {
+    .header-content {
+        padding-left: 0px;
     }
 }
 
@@ -160,10 +182,6 @@ label div {
 
     .navigation-bar {
         display: none !important;
-    }
-
-    nav {
-        margin-right: 72px;
     }
 }
 

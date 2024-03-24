@@ -22,6 +22,17 @@ header .navigation-bar a:hover {
   color: #00BEE8;
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 100px;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -32,6 +43,7 @@ nav {
   color: #00bee8;
   font-size: 24px;
   transition: transform 0.3s ease-in-out;
+  padding-right: 30px;
 }
 .language:hover {
   cursor: pointer;
@@ -90,7 +102,7 @@ a .color-letter {
 
 label {
   position: absolute;
-  top: 65px;
+  top: 24px;
   right: 30px;
   display: block;
   width: 40px;
@@ -133,11 +145,19 @@ label div {
     padding-right: 30px;
     width: calc(100% - 60px);
   }
+  .header-content {
+    padding-right: 100px;
+  }
   .navigation-bar {
     padding-right: 0 !important;
   }
   .mobile-menu {
     margin-left: -30px;
+  }
+}
+@media (max-width: 1920px) {
+  .header-content {
+    padding-left: 0px;
   }
 }
 @media (max-width: 720px) {
@@ -146,9 +166,6 @@ label div {
   }
   .navigation-bar {
     display: none !important;
-  }
-  nav {
-    margin-right: 72px;
   }
 }
 @media (max-width: 380px) {

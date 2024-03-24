@@ -1,3 +1,12 @@
+.portfolio-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 7;
+  position: relative;
+}
+
 .headline-container {
   display: flex;
   align-items: center;
@@ -20,9 +29,11 @@
 }
 .headline-container .long-blue-line {
   position: absolute;
-  width: 484px;
   right: 0;
   border: 2px solid #4b47ff;
+  width: 600px;
+  height: 0;
+  z-index: 2;
 }
 
 span {
@@ -35,6 +46,11 @@ span {
   justify-content: center;
 }
 
+@media (max-width: 1860px) {
+  .long-blue-line {
+    width: 500px !important;
+  }
+}
 @media (max-width: 1665px) {
   .long-blue-line {
     width: 350px !important;

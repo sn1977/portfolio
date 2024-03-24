@@ -1,15 +1,26 @@
+#contact {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .contact-container {
   display: flex;
   align-items: center;
   gap: 35px;
-  min-width: 700px;
+  position: relative;
+  padding-left: 100px;
 }
 .contact-container .blue-line {
-  width: 50px;
-  height: 0;
+  position: absolute;
+  right: 100%; /* Positions the left edge of the blue line at the right edge */
   border: 2px solid #4b47ff;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  width: calc(100vw - 100%); /* Calculates the width to extend from the right edge of the parent to the right edge of the viewport */
+  height: 0;
+  z-index: 2;
 }
 .contact-container h1 {
   font-size: 90px;
@@ -116,6 +127,7 @@ form input::placeholder, form textarea::placeholder {
   display: inline-block;
   vertical-align: middle;
   border-radius: 3px;
+  cursor: pointer;
 }
 .privacy-submit-container .custom-checkbox input:checked ~ .checkmark:after {
   content: "";
@@ -169,6 +181,10 @@ form input::placeholder, form textarea::placeholder {
   padding: 0 100px 96px 100px;
   display: flex;
   justify-content: end;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 .scroll-up img {
   width: 39px;
@@ -250,7 +266,6 @@ form input::placeholder, form textarea::placeholder {
   position: absolute;
   width: 100%;
   height: 56px;
-  cursor: pointer;
   z-index: 1;
   background-color: transparent;
   bottom: 0;
@@ -269,6 +284,14 @@ form input::placeholder, form textarea::placeholder {
   bottom: -230px;
 }
 
+@media (max-width: 1920px) {
+  .blue-line {
+    width: 50px;
+    height: 0;
+    border: 2px solid #4b47ff;
+    position: unset;
+  }
+}
 @media (max-width: 1250px) {
   form {
     min-width: 280px;
@@ -281,14 +304,27 @@ form input::placeholder, form textarea::placeholder {
     padding-right: 30px;
     padding-left: 30px;
   }
+  .contact-container {
+    padding-left: 30px;
+  }
   .contact-explanation {
     padding-left: 0;
     width: unset;
+  }
+  .background-end-form {
+    width: 50%;
+    height: 50%;
+    left: -36px;
   }
 }
 @media (max-width: 870px) {
   .contact-container {
     margin-top: 100px;
+  }
+}
+@media (max-width: 700px) {
+  .scroll-up {
+    padding-right: 30px;
   }
 }
 @media (max-width: 500px) {
@@ -316,6 +352,11 @@ form input::placeholder, form textarea::placeholder {
 .input-div input:valid {
   background-color: #141d2f;
   color: #FFFFFF;
+}
+
+#contact {
+  padding-top: 100px;
+  margin-top: -100px;
 }
 
 /*# sourceMappingURL=contact.component.css.map */
