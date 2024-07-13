@@ -27,6 +27,12 @@
         },
         "elPolloLoco": {
             "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the crazy hen."
+        },
+        "dabubble": {
+            "description": "Chat messenger inspired by Slack. Contact your colleagues and exchange ideas with them."
+        },
+        "new-project": {
+            "description": "Be exited to see my new project."
         }
     },
     "contact-section": {

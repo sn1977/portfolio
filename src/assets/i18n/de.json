@@ -26,6 +26,12 @@
         },
         "elPolloLoco": {
             "description": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Salsa-Flaschen zu finden, um gegen das verrückte Huhn zu kämpfen."
+        },
+        "dabubble": {
+            "description": "Von Slack inspirierter Chat-Messenger. Nehmen Sie Kontakt mit Ihren Kollegen auf und tauschen Sie sich mit ihnen aus."
+        },
+        "new-project": {
+            "description": "Seien Sie gespannt, mein neues Projekt zu sehen."
         }
     },
     "contact-section": {

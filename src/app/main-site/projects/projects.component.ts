@@ -2,6 +2,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import * as AOS from 'aos';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 
 /**
@@ -11,7 +12,7 @@ import {TranslateModule, TranslateService} from '@ngx-translate/core';
 @Component({
     selector: 'app-projects', // Defines the custom element name for this component
     standalone: true, // Indicates that the component is standalone, meaning it can be used without an NgModule
-    imports: [TranslateModule], // Specifies an array of imports that are used within the component's template
+    imports: [TranslateModule, CommonModule], // Specifies an array of imports that are used within the component's template
     templateUrl: './projects.component.html', // Path to the HTML file associated with this component
     styleUrls: ['./projects.component.scss'] // Path to the style file associated with this component
 })

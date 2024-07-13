@@ -6,7 +6,7 @@
         <h2>{{ project.name }}</h2>
         <span class="tec">{{ project.tec }}</span>
         <span class="description">{{ 'projects.' + project.key + '.description' | translate }}</span>
-        <div class="btn-container">
+        <div class="btn-container" *ngIf="project.name !== 'New Project...'">
             <a href="{{ project.projectLink }}" target="_blank">
                 <button class="btn-live-test">Live test</button>
             </a>
