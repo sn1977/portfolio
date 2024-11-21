@@ -85,6 +85,23 @@
     }
 }
 
+.btn-github-backend {
+  color: white;
+  font-weight: 400;
+  font-size: 23px;
+  background-color: unset;
+  width: 152px;
+  height: 58px;
+  border-radius: 10px;
+  border: 2px solid #00bee8;
+  margin-left: 24px;
+
+  &:hover {
+      cursor: pointer;
+      background-color: #00bee8;
+  }
+}
+
 .change-direction {
     flex-direction: row-reverse;
     justify-content: start !important;
@@ -137,7 +154,7 @@
 }
 
 @media (max-width: 450px) {
-    .btn-live-test, .btn-github {
+    .btn-live-test, .btn-github , .btn-github-backend{
         font-size: 18px;
         width: 120px;
         height: 48px;

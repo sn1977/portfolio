@@ -56,6 +56,6 @@ export class ProjectsComponent implements OnInit {
      * Specifically, if the project name is 'El Pollo Loco' or 'New Project...', changes the layout or presentation sequence.
      */
     changeSequenceProject() {
-        this.changeSequence = this.project.name == 'El Pollo Loco' || this.project.name == 'New Project...';
+        this.changeSequence = this.project.name == 'El Pollo Loco' || this.project.name == 'Videoflix' ;
     }
 }

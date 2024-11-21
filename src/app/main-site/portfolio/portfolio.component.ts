@@ -57,6 +57,17 @@ export class PortfolioComponent {
             projectLink: "https://dabubble.sascha-nemeth.com/",
         },
         {
+          key: "videoflix",
+          name: "Videoflix",
+          img: "videoflix.png",
+          tec: "Angular | Typescript | Django | HTML | CSS",
+          description:
+              "A video plattform for streaming videos.",
+          githubLink: "https://github.com/sn1977/videoflix_frontend",
+          githubLinkBackend: "https://github.com/sn1977/videoflix_backend",
+          projectLink: "https://videoflix.sascha-nemeth.com/",
+      },
+        {
           key: "new-project",
           name: "New Project...",
           img: "new-project.png",

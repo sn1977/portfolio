@@ -31,8 +31,11 @@
         "dabubble": {
             "description": "Chat messenger inspired by Slack. Contact your colleagues and exchange ideas with them."
         },
+        "videoflix": {
+            "description": "A video platform for streaming videos."
+        },
         "new-project": {
-            "description": "Be exited to see my new project."
+            "description": "Be excited to see my new project."
         }
     },
     "contact-section": {
